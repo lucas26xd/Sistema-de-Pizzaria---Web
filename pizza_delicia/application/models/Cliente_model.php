@@ -26,7 +26,7 @@ class Cliente_model extends CI_Model {
       }
       $query = $this->db->insert_batch("endereco", $endereco);//add mais de registro de uma vez
     }
-    return $query;
+    return $query->row_array();
   }
 
 }
