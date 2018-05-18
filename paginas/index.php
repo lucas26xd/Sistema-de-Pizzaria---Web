@@ -3,7 +3,7 @@
 	<head>
 		<title>Pizza Delicia</title>
 		<meta charset="utf-8">
-		<meta name="author" content="Lucas Santos e Ângela Magalhães">
+		<meta name="author" content="Lucas, Ângela">
 	    <meta name="generator" content="Atom e Sublime">
 	    <meta name="keywords" content="HTML, CSS, JQuery">
 	    <meta name="description" content="Site para pedidos em uma pizzaria">
