@@ -1,0 +1,281 @@
+html {
+   //background-color: #FFC107;
+}
+
+#cabecalho {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 10vw;
+    color: #D50000;
+    font-style: italic;
+    text-align-last: left;
+    letter-spacing: -0.05em;
+    margin-top: 15px;
+    background-color: #FFC107;
+}
+
+.slider {
+    //text-align: center;
+    //padding: 15px;
+    margin: 20px auto;
+    width: 900px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto {
+    position: absolute;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao {
+    25% {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.foto:nth-child(1){}
+.foto:nth-child(2){
+    animation-delay: 5s;
+}
+.foto:nth-child(3){
+    animation-delay: 10s;
+}
+.foto:nth-child(4){
+    animation-delay: 15s;
+}
+.foto:nth-child(5){
+    animation-delay: 20s;
+}
+.foto:nth-child(6){
+    animation-delay: 25s;
+}
+
+#promo {
+    text-align: center;
+    color: #1B5E20;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 3px 2px black;
+}
+
+#promo1 {
+    text-align: center;
+    color: #F57C00;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 3px 2px #FFD740;
+}
+
+.al {
+    font-family: 'Sacramento', cursive;
+    text-align: justify;
+    font-size: 32px;
+    font-weight: normal;    
+}
+
+#al {
+    text-align: center;
+}
+
+nav {
+    //border:1px solid #FF8F00;
+    width: auto;
+    background-color: #1B5E20;//#FF6F00;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    //padding: 4px;
+}
+
+nav ul li {
+    display: inline-block;
+    font-family: Georgia, "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: normal;
+
+}
+
+nav ul li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    padding: 4px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #E65100;
+    text-decoration: none;
+    color: white; 
+}
+
+.texto {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #1B5E20;
+    font-style: normal;
+    text-align: justify;
+}
+
+#gif {
+    height: 300px;
+    float: left;
+    display: none;
+}
+
+#gif2 {
+    height: 195px;
+    float: right;
+}
+
+#gif3 {
+    width: 15%;
+    float: left;
+    margin-right: -200px;
+    margin-left:  200px;
+    display: none;
+}
+
+#sucesso {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 8vw;
+    color: #607D8B;
+    font-style: italic;
+    text-align-last: center;
+    letter-spacing: -0.05em;
+}
+
+.centralizado {
+    width: 1100px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+footer {
+    clear: both;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: #FFF;
+    padding: 5px;
+}
+
+.imgs_peq {
+    width: 20px;
+    margin-right: 6px;
+    margin-left: 3px;
+}
+
+.tabela {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: none;
+}
+
+.tabela td, .tabela th {
+    border: 1px solid #FFE082;
+    padding: 8px;
+}
+
+.tabela tr:nth-child(even) {
+  background-color: #FFF8E1;
+}
+
+.tabela tr:hover {
+  background-color: #FFECB3;
+}
+
+.tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FFC107;
+    color: #D50000;
+}
+
+address a {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+label {
+    font-family: Georgia, "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #1B5E20;
+    font-style: italic;
+    font-size: 20px;
+}
+
+input[type=text], select {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit], input[type=reset] {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 45%;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type=reset] {
+    background-color: #E53935;
+    margin-left: 35px;
+    float: left;
+}
+
+input[type=submit] {
+    font-weight: bold;
+    background-color: #4CAF50;
+    margin-right: 35px;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;}
+
+input[type=reset]:hover {
+    background-color: #D32F2F;
+}
+
+textarea {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.pizzas {
+    width: 345px;
+}
