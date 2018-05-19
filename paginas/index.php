@@ -4,13 +4,13 @@
 		<title>Pizza Delicia</title>
 		<meta charset="utf-8">
 		<meta name="author" content="Lucas e Ângela">
-	    <meta name="generator" content="Atom e Sublime">
-	    <meta name="keywords" content="HTML, CSS, JQuery">
-	    <meta name="description" content="Site para pedidos em uma pizzaria">
-	    <link rel="shortcut icon" href="../imagens/pizza.ico" >
-	    <link rel="stylesheet" href="../css/bootstrap.min.css">
-	    <link rel="stylesheet" href="../css/estilo.css">
-	    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Sacramento|Satisfy|Parisienne" rel="stylesheet">
+	  <meta name="generator" content="Atom e Sublime">
+	  <meta name="keywords" content="HTML, CSS, JQuery">
+	  <meta name="description" content="Site para pedidos em uma pizzaria">
+	  <link rel="shortcut icon" href="../imagens/pizza.ico" >
+	  <link rel="stylesheet" href="../css/bootstrap.min.css">
+	  <link rel="stylesheet" href="../css/estilo.css">
+	  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Sacramento|Satisfy|Parisienne" rel="stylesheet">
 	</head>
 	<body>
 		<div class="container">
