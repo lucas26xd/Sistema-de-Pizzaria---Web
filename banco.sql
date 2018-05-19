@@ -65,3 +65,5 @@ CREATE TABLE 'pizzaria'.'itensPedido' (
     REFERENCES 'pizzaria'.'produto' ('id')
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
+GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4d1n';
