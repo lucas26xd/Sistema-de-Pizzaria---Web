@@ -223,7 +223,7 @@ label {
   font-size: 20px;
 }
 
-input[type=text], select {
+input[type=text], input[type=password], select {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   width: 100%;
   padding: 12px 20px;
@@ -282,16 +282,20 @@ textarea {
   width: 345px;
 }
 
-#addEnd {
-  background: url('../imagens/addEnd.png');
-  width: 30px;
-  height: 30px;
-  border: none;
+.endereco label {
+  font-family: Georgia, "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #1B5E20;
+  font-style: italic;
+  font-size: 14px;
+  //float: right;
 }
 
-#remEnd {
-  background: url('../imagens/remEnd.png');
-  width: 30px;
-  height: 30px;
-  border: none;
+.rua {
+  //float: left;
+  width: 60%;
+  margin-right: 30px;
+}
+.num {
+  //float: right;
+  width: 30%;
 }
