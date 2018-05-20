@@ -9,6 +9,15 @@
 $( document ).ready(function() {
 	$("form, #gif, #gif3, .tabela").show(1000); //animação dos elementos
 
+	$('#tel').mask('(00) 0000-0000');
+	$('#troco').mask('##0,00', {reverse: true});
+
+	$('#troco').blur(function() {
+		this.form.troco.value = (this.form.troco.value == "" ? "0,00" : this.form.troco.value);
+		this.form.troco.value = (this.form.troco.value.includes(",00") ? this.form.troco.value : this.form.troco.value + ",00");
+		this.form.troco.value = "R$ " + this.form.troco.value;
+	});
+
 	$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
 
 	$("#enviarsugestao").click(function(btn){ //ação do botão de sugestões
