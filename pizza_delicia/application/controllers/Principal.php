@@ -15,6 +15,6 @@ class Principal extends CI_Controller {
     $this->load->view('templates/footer');
 
     $this->load->model('cliente_model');
-    print_r($this->cliente_model->get_clientes('Tadeu'));
+    print_r($this->cliente_model->get_clientes());
   }
 }
