@@ -66,4 +66,11 @@ CREATE TABLE pizzaria.itensPedido (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4dm1n'; //se não der por aqui tem que fazer manualmente
+CREATE TABLE pizzaria.sugestao (
+  id INT NOT NULL,
+  clienteID INT NOT NULL,
+  msg TEXT(500) NOT NULL,
+  data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY ('id'));
+
+GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4dm1n';
