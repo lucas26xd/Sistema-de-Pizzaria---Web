@@ -20,18 +20,19 @@
   </head>
 
 	<body>
-  
+
     <div class="container">
       <header>
         <h1 id="cabecalho">PizzaDelícia</h1>
       </header>
       <nav>
-        <ul>        
+        <ul>
           <li><a href="<?=site_url('principal')?>">Principal</a></li>
           <li><a href="<?=site_url('cardapio')?>">Cardápio</a></li>
           <li><a href="<?=site_url('promocao')?>">Promoções</a></li>
           <li><a href="<?=site_url('pedido')?>">Realizar Pedido</a></li>
           <li><a href="<?=site_url('sugestao')?>">Sugestões</a></li>
+          <li><a href="<?=site_url('cadastro')?>">Cadastro</a></li>
         </ul>
       </nav>
 

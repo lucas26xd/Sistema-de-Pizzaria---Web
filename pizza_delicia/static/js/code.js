@@ -9,10 +9,10 @@
 $( document ).ready(function() {
 	$("form, #gif, #gif3, .tabela").show(1000); //animação dos elementos
 
-	$('#tel').mask('(00) 0000-0000');
-	$('#troco').mask('##0,00', {reverse: true});
+	$('#tel').mask('(00) 0000-0000'); //colocando máscara no campo de telefone
+	$('#troco').mask('##0,00', {reverse: true}); // colocando máscara no campo de troco
 
-	$('#troco').blur(function() {
+	$('#troco').blur(function() {// colocando R$ na frente do valor do troco
 		this.form.troco.value = (this.form.troco.value == "" ? "0,00" : this.form.troco.value);
 		this.form.troco.value = (this.form.troco.value.includes(",00") ? this.form.troco.value : this.form.troco.value + ",00");
 		this.form.troco.value = "R$ " + this.form.troco.value;
@@ -38,6 +38,26 @@ $( document ).ready(function() {
 			this.form[this.form.length - 3].value = "0";
 		}
 	});
+
+	//ação dos botões de inserir e remover campos de endereço
+	$("#addEnd").click(function(e) {
+		e.preventDefault();
+		var filhos = $("div.endereco").children().length;
+		filhos++;
+		$("div.endereco").append('<div><label for="rua'+ filhos + '">Rua ' + filhos + ':</label><input type="text" ' +
+		'name="rua' + filhos + '" id="rua' + filhos + '" placeholder="Sua rua de entrega ' + filhos + '">' +
+		'<label for="num'+ filhos + '">Número ' + filhos + ':</label><input type="text" ' +
+		'name="num' + filhos + '" id="num' + filhos + '" placeholder="ex.: 320">' +
+		'<label for="bairro'+ filhos + '">Bairro ' + filhos + ':</label><input type="text" ' +
+		'name="bairro' + filhos + '" id="bairro' + filhos + '" placeholder="Seu bairro">' +
+		'<label for="cidade'+ filhos + '">Cidade ' + filhos + ':</label><input type="text" ' +
+		'name="cidade' + filhos + '" id="cidade' + filhos + '" placeholder="Sua cidade"></div>');
+		});
+
+	$("#remEnd").click(function(e) {
+			e.preventDefault();
+			$("div.enereco").children().last().remove();
+		});
 });
 
 function verificaCampos(form) {
