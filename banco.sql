@@ -66,4 +66,4 @@ CREATE TABLE pizzaria.itensPedido (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY 4d1n;
+GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4dm1n'; //se não der por aqui tem que fazer manualmente
