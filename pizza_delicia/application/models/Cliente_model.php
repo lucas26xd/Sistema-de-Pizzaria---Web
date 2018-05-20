@@ -16,4 +16,10 @@ class Cliente_model extends CI_Model {
     return $query->row_array();
   }
 
+  public function insere_cliente($nome, $tel, $email, $senha) {
+    $data = array('nome' => $nome, 'telefone' => $tel, 'email' => $email, 'senha' => sha1($senha));
+    $query = $this->db->insert("cliente", $data);
+    return $query;
+  }
+
 }

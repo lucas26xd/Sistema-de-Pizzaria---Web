@@ -1,10 +1,5 @@
 		<?php
-			@ $nome = $_POST["nome"];
-			@ $tel = $_POST["tel"];
-			@ $email = $_POST["email"];
-			@ $senha = $_POST["senha"];
-
-			if ($nome != null) {?>
+			if($cadastrou){?>
 				<div id="sucessopedido" class="alert alert-success alert-dismissible fade show" role="alert">
 					<h4 class="alert-heading">Sucesso!</h4>
 					<p>Cadastro realizado com Sucesso!<br>Seja bem vindo a Pizza Delicia agora você pode realizar pedidos e saborear a melhor pizza da região!</p>
