@@ -60,6 +60,60 @@ $( document ).ready(function() {
 		});
 });
 
+function verificaCadastro(form) {
+	if(validaCadastro(form)){
+		return confirm("Você confirma seus dados?");
+	}else{
+		return false;
+	}
+}
+
+function validaCadastro(form){
+	if (form.nome.value.length > 0) {
+		if (form.tel.value.length > 0) {
+			if (form.email.value.length > 0) {
+				if (form.senha.value.length > 0) {
+					if (verificaEnderecos()) {
+						return true;
+					}else{
+						alert("Por favor, escolha o seu pedido!");
+						form.pedido.focus();
+					}
+				}else{
+					alert("Por favor, indique sua senha!");
+					form.senha.focus();
+				}
+			}else{
+				alert("Por favor, informe seu email!");
+				form.email.focus();
+			}
+		}else{
+			alert("Por favor, informe seu telefone!");
+			form.tel.focus();
+		}
+	}else{
+		alert("Por favor, informe o seu nome!");
+		form.nome.focus();
+	}
+	return false;
+}
+
+function verificaEnderecos() {
+	var enderecos = $("div.endereco").children();
+	if(enderecos.length == 0)
+		return "Por favor, informe um endereco";
+	for (var i = 0; i < enderecos.length; i++) {
+		var campos = enderecos[i].children();
+		for (var i = 1; i < campos.length; i+=2) {//pega só os campos, estão sempre numa posição impar do vetor, label depois campo
+			if(campos[i].value.length == 0){
+				campos[i].focus();
+				return "Por favor, informe o(a) " + campos[i-1].textContent; //retorna o nome do campo que está em branco (label)
+			}
+		}
+	}
+	return true;
+}
+
 function verificaCampos(form) {
 	if (form.nome.value.length > 0) {
 		if (form.end.value.length > 0) {

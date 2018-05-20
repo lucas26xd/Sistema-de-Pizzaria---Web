@@ -16,7 +16,7 @@ class Cadastro extends CI_Controller {
     $data['cadastrou'] = $nome != null && $tel != null && $email != null && $senha != null;
     if ($data['cadastrou']) {
       $this->load->model('cliente_model');
-      print_r($this->cliente_model->insere_cliente($nome, $tel, $email, $senha));
+      $this->cliente_model->insere_cliente($nome, $tel, $email, $senha);
     }
 
     $data['title'] = ucfirst($page);

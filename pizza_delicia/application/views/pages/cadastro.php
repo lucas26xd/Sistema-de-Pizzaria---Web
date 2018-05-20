@@ -10,7 +10,7 @@
 					</button>
 				</div>
 			<?php } ?>
-			<form method="post" action="" style="display: none">
+			<form id="cadastrarCliente" method="post" action="" style="display: none" onsubmit="return verificaCadastro(this);">
 				<label for="nome">Nome:</label>
 				<input type="text" id="nome" name="nome" placeholder="Seu nome">
 				<label for="tel">Telefone:</label>
@@ -35,5 +35,5 @@
 				<input type="password" name="senha"  id="senha">
 				<br><br>
 				<input type="reset" name="limpar" value="Limpar">
-				<input type="submit" name="env" id="cadastrar" value="Cadastrar">
+				<input type="submit" name="env" value="Cadastrar">
 			</form>
