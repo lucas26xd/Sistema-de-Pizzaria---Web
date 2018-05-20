@@ -73,4 +73,6 @@ CREATE TABLE pizzaria.sugestao (
   data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY ('id'));
 
-GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4dm1n';
+  CREATE USER 'admin'@'localhost' IDENTIFIED BY '4dm1n';
+  GRANT ALL PRIVILEGES ON pizzaria.* TO 'admin'@'localhost';
+  FLUSH PRIVILEGES;
