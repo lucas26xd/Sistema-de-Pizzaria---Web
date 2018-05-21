@@ -31,7 +31,7 @@
 				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Adicionar" width="40" height="40">
 				<br>
 				<label for="email">Email:</label>
-				<input type="text" name="email" id="email" placeholder="seuemail@email.com">
+				<input type="text" name="email" id="email" placeholder="seuemail@email.com" onblur="validaEmail(this);">
 				<label for="senha">Senha:</label>
 				<input type="password" name="senha"  id="senha">
 				<br><br>

@@ -73,7 +73,7 @@ function verificaCadastro(form) {
 function validaCadastro(form){
 	if (form.nome.value.length > 0) {
 		if (form.tel.value.length > 0) {
-			if (form.email.value.length > 0) {
+			if (validaEmail(form.email)) {
 				if (form.senha.value.length > 7) {
 					if (verificaEnderecos()) {
 						return true;
@@ -85,7 +85,7 @@ function validaCadastro(form){
 					form.senha.focus();
 				}
 			}else{
-				alert("Por favor, informe seu email!");
+				alert("Por favor, um email válido!");
 				form.email.focus();
 			}
 		}else{
@@ -121,6 +121,28 @@ function verificaEnderecos() {
 	return true;
 }
 
+function validaEmail(campo) { //função que verifica se o email é válido
+	usuario = campo.value.substring(0, campo.value.indexOf("@"));
+	dominio = campo.value.substring(campo.value.indexOf("@")+ 1, campo.value.length);
+
+	if ((usuario.length >= 1) &&
+	    (dominio.length >= 3) &&
+	    (usuario.search("@")== -1) &&
+	    (dominio.search("@")== -1) &&
+	    (usuario.search(" ")== -1) &&
+	    (dominio.search(" ")== -1) &&
+	    (dominio.search(".")!= -1) &&
+	    (dominio.indexOf(".") >= 1)&&
+	    (dominio.lastIndexOf(".") < dominio.length - 1)) {
+		document.getElementById("email").style.color = "#000";
+		return true;
+	}else{
+		document.getElementById("email").style.color = "#F00";
+		return false;
+	}
+}
+
+//----------------------CODIGO EM LIMBO----------------------
 function verificaCampos(form) {
 	if (form.nome.value.length > 0) {
 		if (form.end.value.length > 0) {
