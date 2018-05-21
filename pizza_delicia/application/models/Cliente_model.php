@@ -16,9 +16,16 @@ class Cliente_model extends CI_Model {
     return $query->row_array();
   }
 
-  public function insere_cliente($nome, $tel, $email, $senha) {
-    $data = array('nome' => $nome, 'telefone' => $tel, 'email' => $email, 'senha' => sha1($senha));
-    $query = $this->db->insert("cliente", $data);
+  public function insere_cliente($nome, $tel, $email, $senha, $endereco) {
+    $dados = array('nome' => $nome, 'telefone' => $tel, 'email' => $email, 'senha' => sha1($senha));
+    $query = $this->db->insert("cliente", $dados);
+    if($query){
+      $clienteID = $this->db->insert_id(); //pega o id do ultimo insert
+      for ($i=0; $i < count($endereco); $i++) {// colocando no array para ser atrelado o cliente, na tabela endereco
+        $endereco[$i]['clienteID'] = $clienteID;
+      }
+      $query = $this->db->insert_batch("endereco", $endereco);//add mais de registro de uma vez
+    }
     return $query;
   }
 

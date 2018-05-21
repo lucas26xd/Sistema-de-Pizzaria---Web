@@ -15,6 +15,7 @@
 				<input type="text" id="nome" name="nome" placeholder="Seu nome">
 				<label for="tel">Telefone:</label>
 				<input type="text" name="tel"  id="tel" placeholder="(88) 9 9999 9999">
+				<input type="hidden" name="qtdEnd" id="qtdEnd">
 				<div class="endereco">
 					<div><label for="rua1">Rua 1:</label>
 					<input type="text" class="rua" name="rua1" id="rua1" placeholder="Sua rua de entrega 1">

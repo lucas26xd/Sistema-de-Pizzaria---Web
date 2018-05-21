@@ -6,10 +6,12 @@
 //}
 //setInterval(trocaimagem, 2500);
 
+var m = "Mensagem";
+
 $( document ).ready(function() {
 	$("form, #gif, #gif3, .tabela").show(1000); //animação dos elementos
 
-	$('#tel').mask('(00) 0000-0000'); //colocando máscara no campo de telefone
+	$('#tel').mask('(00) 00000-0000'); //colocando máscara no campo de telefone
 	$('#troco').mask('##0,00', {reverse: true}); // colocando máscara no campo de troco
 
 	$('#troco').blur(function() {// colocando R$ na frente do valor do troco
@@ -72,15 +74,14 @@ function validaCadastro(form){
 	if (form.nome.value.length > 0) {
 		if (form.tel.value.length > 0) {
 			if (form.email.value.length > 0) {
-				if (form.senha.value.length > 0) {
+				if (form.senha.value.length > 7) {
 					if (verificaEnderecos()) {
 						return true;
 					}else{
-						alert("Por favor, escolha o seu pedido!");
-						form.pedido.focus();
+						alert(m);
 					}
 				}else{
-					alert("Por favor, indique sua senha!");
+					alert("Por favor, indique uma senha de 8 ou mais caracteres!");
 					form.senha.focus();
 				}
 			}else{
@@ -100,14 +101,20 @@ function validaCadastro(form){
 
 function verificaEnderecos() {
 	var enderecos = $("div.endereco").children();
-	if(enderecos.length == 0)
-		return "Por favor, informe um endereco";
+	if(enderecos.length == 0){
+		$("#addEnd").focus();
+		m = "Por favor, informe um endereco";
+		return false;
+	}
+	$("#qtdEnd").val(enderecos.length+"");//add quant de endereços a serem cadastrados em um campo oculto, para ser tratado em php
 	for (var i = 0; i < enderecos.length; i++) {
-		var campos = enderecos[i].children();
-		for (var i = 1; i < campos.length; i+=2) {//pega só os campos, estão sempre numa posição impar do vetor, label depois campo
-			if(campos[i].value.length == 0){
-				campos[i].focus();
-				return "Por favor, informe o(a) " + campos[i-1].textContent; //retorna o nome do campo que está em branco (label)
+		var campos = enderecos.children();
+		console.log(campos);
+		for (var j = 1; j < campos.length; j+=2) {//pega só os campos, estão sempre numa posição impar do vetor, label depois campo
+			if(campos[j].value.length == 0){
+				campos[j].focus();
+				m = "Por favor, informe o(a) " + campos[j-1].textContent; //retorna o nome do campo que está em branco (label)
+				return false;
 			}
 		}
 	}
