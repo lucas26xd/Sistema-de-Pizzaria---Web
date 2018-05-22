@@ -71,7 +71,7 @@ CREATE TABLE pizzaria.sugestao (
   clienteID INT NOT NULL,
   msg TEXT(500) NOT NULL,
   data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY ('id'));
+  PRIMARY KEY (id));
 
   CREATE USER 'admin'@'localhost' IDENTIFIED BY '4dm1n';
   GRANT ALL PRIVILEGES ON pizzaria.* TO 'admin'@'localhost';
