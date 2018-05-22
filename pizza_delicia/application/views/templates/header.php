@@ -21,11 +21,11 @@
 
 	<body>
 
-    <div class="container">
+    <!--div class="container">
       <header>
         <h1 id="cabecalho">PizzaDelícia</h1>
       </header>
-      <nav>
+      <nav class="old">
         <ul>
           <li><a href="<?=site_url('principal')?>">Principal</a></li>
           <li><a href="<?=site_url('cardapio')?>">Cardápio</a></li>
@@ -35,5 +35,48 @@
           <li><a href="<?=site_url('cadastro')?>">Cadastro</a></li>
         </ul>
       </nav>
+      <br-->
 
-      <br>
+  	<header>
+
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-warning">
+        <div class="container">
+          <a class="navbar-brand" title="Pizza Delícia" href="<?=site_url('principal')?>">
+            <strong>Pizza Delícia</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Principal')) echo 'active font-weight-bold'; ?>" href="<?=site_url('principal')?>">Principal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Cardapio')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cardapio')?>">Cardápio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Promocao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('promocao')?>">Promoções</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Pedido')) echo 'active font-weight-bold'; ?>" href="<?=site_url('pedido')?>">Realizar Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Sugestao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('sugestao')?>">Sugestões</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Cadastro')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cadastro')?>">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if (!strcmp($title,'Cliente')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cliente')?>">Cliente</a>
+              </li>              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">      
