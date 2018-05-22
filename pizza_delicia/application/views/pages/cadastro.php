@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<input id="addEnd" type="image" src="<?=base_url('static/imagens/addEnd.png')?>" alt="Adicionar" width="40" height="40">
-				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Adicionar" width="40" height="40">
+				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Remover" width="40" height="40">
 				<br>
 				<label for="email">Email:</label>
 				<input type="text" name="email" id="email" placeholder="seuemail@email.com" onblur="validaEmail(this);">
