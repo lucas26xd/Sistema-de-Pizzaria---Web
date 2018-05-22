@@ -1,4 +1,4 @@
-			<div id="sucessopedido" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+<div id="sucessopedido" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
 				<h4 class="alert-heading">Sucesso!</h4>
 				<p>Seu pedido foi realizado com Sucesso!<br>Em alguns minutos você irá ter a melhor sensação possível ao saborear a nossa pizza! Obrigado e bom apetite!</p>
 				<hr>
@@ -40,6 +40,8 @@
 					<option value="18">Calzone de Carne de Sol</option>
 				</select>
 				<br><br>
-				<input type="reset" name="limpar" value="Limpar">
-				<input type="submit" name="env" id="enviarpedido" value="Enviar">
+        <div class="row justify-content-center">
+          <input type="reset" class="col" name="limpar" value="Limpar">
+          <input type="submit" class="col" name="env" id="enviarpedido" value="Enviar">
+        </div>
 			</form>

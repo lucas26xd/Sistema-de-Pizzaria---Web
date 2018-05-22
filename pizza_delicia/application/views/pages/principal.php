@@ -1,20 +1,20 @@
-			<section>
-			  <figure class="slider">
-			    <img class="foto" src="<?=base_url('static/imagens/imgs/001.jpg')?>">
-			    <img class="foto" src="<?=base_url('static/imagens/imgs/002.jpg')?>">
-			    <img class="foto" src="<?=base_url('static/imagens/imgs/003.jpg')?>">
-			    <img class="foto" src="<?=base_url('static/imagens/imgs/004.jpg')?>">
-			    <img class="foto" src="<?=base_url('static/imagens/imgs/005.jpg')?>">
-					<img class="foto" src="<?=base_url('static/imagens/imgs/006.jpg')?>">
-			  </figure>
-			</section>
+      <section>
+        <figure class="slider">
+          <img class="foto" src="<?=base_url('static/imagens/imgs/001.jpg')?>">
+          <img class="foto" src="<?=base_url('static/imagens/imgs/002.jpg')?>">
+          <img class="foto" src="<?=base_url('static/imagens/imgs/003.jpg')?>">
+          <img class="foto" src="<?=base_url('static/imagens/imgs/004.jpg')?>">
+          <img class="foto" src="<?=base_url('static/imagens/imgs/005.jpg')?>">
+          <img class="foto" src="<?=base_url('static/imagens/imgs/006.jpg')?>">
+        </figure>
+      </section>
 
       <img id="gif" src="<?=base_url('static/imagens/giphy.gif')?>">
-      
+
       <br><br>
-      
+
       <h3 class="al">
-        &nbsp;&nbsp;&nbsp;&nbsp;"Nós da PizzaDelicia estamos muito felizes em lhe atender. 
+	      &nbsp;&nbsp;&nbsp;&nbsp;"Nós da PizzaDelicia estamos muito felizes em lhe atender. 
         Estamos no ramo de pizzaria a mais de 25 anos, sempre com a missão de satisfazer 
         nossos clientes. Levando até você o prazer de saborear a mais deliciosa pizza do
         Ceará. Aqui você pode <a href="<?=site_url('pedido')?>">Realizar Pedido</a>,
@@ -24,7 +24,6 @@
         para sempre crescer junto com você na arte de fazer pizza".
       </h3>
 
-			<br><br><br><br>
+      <br><br><br><br>
 
       <h1 class="al" id="al">Ângela, Lucas, Tadeu, Kamila e Hugo</h1>
-      

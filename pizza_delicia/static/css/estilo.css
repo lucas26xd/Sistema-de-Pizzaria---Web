@@ -4,6 +4,10 @@ html {
 }
 */
 
+main {
+  padding-top: 55px;
+}
+
 #cabecalho {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 10vw;
@@ -92,37 +96,36 @@ html {
   text-align: center;
 }
 
-nav {
-  /* border:1px solid #FF8F00; */
+nav.old {
+  /*border:1px solid #FF8F00;*/
   width: auto;
-  background-color: #1B5E20; /* #FF6F00; */
+  background-color: #1B5E20; /*#FF6F00;*/ 
   text-align: center;
 }
 
-nav ul {
+nav.old ul {
   list-style: none;
-  /* padding: 4px; */
+  /*padding: 4px;*/
 }
 
-nav ul li {
+nav.old ul li {
   display: inline-block;
   font-family: Georgia, "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-style: oblique;
   font-weight: normal;
-
 }
 
-nav ul li a {
+nav.old ul li a {
   font-size: 24px;
   text-decoration: none;
   color: white;
   padding: 4px 20px;
 }
 
-nav ul li a:hover {
+nav.old ul li a:hover {
   background-color: #E65100;
   text-decoration: none;
-  color: white;
+  color: white; 
 }
 
 .texto {
@@ -239,24 +242,24 @@ input[type=submit], input[type=reset] {
   font-size: 16px;
   width: 45%;
   color: white;
-  padding: 14px 20px;
+  padding: 14px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 input[type=reset] {
   background-color: #E53935;
-  margin-left: 35px;
-  float: left;
+  /*margin-left: 35px;
+  float: left;*/
 }
 
 input[type=submit] {
   font-weight: bold;
   background-color: #4CAF50;
-  margin-right: 35px;
-  float: right;
+  /*margin-right: 35px;
+  float: right;*/
 }
 
 input[type=submit]:hover {

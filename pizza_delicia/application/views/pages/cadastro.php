@@ -35,6 +35,8 @@
 				<label for="senha">Senha:</label>
 				<input type="password" name="senha"  id="senha">
 				<br><br>
-				<input type="reset" name="limpar" value="Limpar">
-				<input type="submit" name="env" value="Cadastrar">
+        <div class="row justify-content-center">
+				  <input type="reset" class="col" name="limpar" value="Limpar">
+				  <input type="submit" class="col" name="env" value="Cadastrar">
+        </div>
 			</form>
