@@ -17,7 +17,7 @@
           padding-top: 40px;
           padding-bottom: 40px;
           background-color: #f5f5f5;
-        }      
+        }
       </style>
 
       <form class="form-signin">
@@ -27,13 +27,13 @@
         </div>
 
         <div class="form-label-group">
-          <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
           <label for="inputEmail">E-mail</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
         </div>
 
         <div class="form-label-group">
-          <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
           <label for="inputPassword">Senha</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
         </div>
 
         <div class="checkbox mb-3">
