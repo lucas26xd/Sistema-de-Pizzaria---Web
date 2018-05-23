@@ -99,7 +99,7 @@ main {
 nav.old {
   /*border:1px solid #FF8F00;*/
   width: auto;
-  background-color: #1B5E20; /*#FF6F00;*/ 
+  background-color: #1B5E20; /*#FF6F00;*/
   text-align: center;
 }
 
@@ -125,7 +125,7 @@ nav.old ul li a {
 nav.old ul li a:hover {
   background-color: #E65100;
   text-decoration: none;
-  color: white; 
+  color: white;
 }
 
 .texto {
@@ -171,7 +171,7 @@ nav.old ul li a:hover {
 
 footer {
   clear: both;
-  width: 700px;
+
   margin: 0 auto;
   font-size: 0.75em;
   text-align: center;
