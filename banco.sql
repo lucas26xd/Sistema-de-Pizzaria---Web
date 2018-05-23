@@ -40,11 +40,14 @@ CREATE TABLE pizzaria.endereco (
     ON UPDATE NO ACTION);
 
 CREATE TABLE pizzaria.produto (
-  id INT NOT NULL AUTO_INCREMENT,
-  nome VARCHAR(45) NOT NULL,
-  valor FLOAT NOT NULL,
-  diponivel TINYINT(1) NOT NULL,
-  PRIMARY KEY (id));
+    id int(11) NOT NULL AUTO_INCREMENT,
+    nome varchar(45) NOT NULL,
+    valorPequena float NOT NULL,
+    valorMedia float NOT NULL,
+    valorGrande float NOT NULL,
+    valorFamilia float NOT NULL,
+    diponivel tinyint(1) NOT NULL,
+    PRIMARY KEY (id));
 
 CREATE TABLE pizzaria.itensPedido (
   id INT NOT NULL AUTO_INCREMENT,
@@ -76,3 +79,10 @@ CREATE TABLE pizzaria.sugestao (
   CREATE USER 'admin'@'localhost' IDENTIFIED BY '4dm1n';
   GRANT ALL PRIVILEGES ON pizzaria.* TO 'admin'@'localhost';
   FLUSH PRIVILEGES;
+
+-- EXECUTEM APENAS AS PRÓXIMAS LINHAS SE SEU BANCO JÁ ESTÁ CRIADO COM A VERSÕ ANTERIOR DESTE CÓDIGO
+ALTER TABLE pizzaria.produto
+CHANGE COLUMN valor valorPequena FLOAT NOT NULL ,
+ADD COLUMN valorMedia FLOAT NOT NULL AFTER valorPequena,
+ADD COLUMN valorGrande FLOAT NOT NULL AFTER valorMedia,
+ADD COLUMN valorFamilia FLOAT NOT NULL AFTER valorGrande;
