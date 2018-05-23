@@ -11,9 +11,7 @@ CREATE TABLE cliente (
   lastVisita datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id));
 
-LOCK TABLES cliente WRITE;
 INSERT INTO cliente VALUES (27,'Lucas Costa Santos','(88) 9966-4683','lucas26xd@hotmail.com','7c222fb2927d828af22f592134e8932480637c0d',0,'2018-05-20 22:26:44'),(28,'Ângela','(88) 99920-3298','angelam0952@gmail.com','a7d579ba76398070eae654c30ff153a4c273272a',0,'2018-05-20 22:34:41');
-UNLOCK TABLES;
 
 DROP TABLE IF EXISTS endereco;
 CREATE TABLE endereco (
@@ -31,9 +29,7 @@ CREATE TABLE endereco (
   ON DELETE NO ACTION
   ON UPDATE NO ACTION);
 
-LOCK TABLES endereco WRITE;
 INSERT INTO endereco VALUES (4,27,'Rua 8 de janeiro, 106','106','brasilia','CRUZ'),(5,28,'Rua de teste 1','100','progresso','Hidrolândia'),(6,28,'Rua do arco','1024','centro','Sobral');
-UNLOCK TABLES;
 
 DROP TABLE IF EXISTS itensPedido;
 CREATE TABLE itensPedido (
@@ -83,9 +79,7 @@ CREATE TABLE produto (
   categoria enum('P','D','C','O') NOT NULL,
   PRIMARY KEY (id));
 
-LOCK TABLES produto WRITE;
 INSERT INTO produto VALUES (1,'Mussarela',10,12,20,22,1,'P'),(2,'Carne de Sol',12,14,24,28,1,'P'),(3,'Bacon',12,14,24,28,1,'P'),(4,'Portuguesa',10,14,20,22,1,'P'),(5,'4 Queijos',10,12,18,20,1,'P'),(6,'Marguerita',10,12,20,22,1,'P'),(7,'Calabresa',10,12,20,22,1,'P'),(8,'Frango c/ Catupiry',10,14,20,24,1,'P'),(9,'Mista',10,12,20,22,1,'P'),(10,'Cheddar',10,12,18,20,1,'P'),(11,'Camarão',15,17,25,32,1,'P'),(12,'Chocolate',10,12,0,0,1,'D'),(13,'Brigadeiro',10,12,0,0,1,'D'),(14,'Romeu e Julieta',10,12,0,0,1,'D'),(15,'Banana c/ Canela',10,12,0,0,1,'D'),(16,'Mussarela',6,10,0,0,1,'C'),(17,'Calabresa',6,10,0,0,1,'C'),(18,'Carne de Sol',6,10,0,0,1,'C');
-UNLOCK TABLES;
 
 DROP TABLE IF EXISTS sugestao;
 CREATE TABLE sugestao (
