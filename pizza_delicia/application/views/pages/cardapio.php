@@ -1,153 +1,86 @@
+
+		<?php if(count($produtos['P']) > 0) { ?>
 			<h1 id="texto">Pizzas:</h1>
-
 			<div class="centralizado">
 				<table class="tabela">
 					<tr>
-						<th>Recheio</th>
-						<th>Pequena</th>
-						<th>Média</th>
-						<th>Grande</th>
-						<th>Família</th>
+						<th scope="col">Sabor</th>
+						<th scope="col">Pequena</th>
+						<th scope="col">Média</th>
+						<th scope="col">Grande</th>
+						<th scope="col">Família</th>
 					</tr>
-					<tr>
-						<td>Mussarela</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-						<td>R$ 20,00</td>
-						<td>R$ 22,00</td>
-					</tr>
-					<tr>
-						<td>Carne de Sol</td>
-						<td>R$ 12,00</td>
-						<td>R$ 14,00</td>
-						<td>R$ 24,00</td>
-						<td>R$ 28,00</td>
-					</tr>
-					<tr>
-						<td>Bacon</td>
-						<td>R$ 12,00</td>
-						<td>R$ 14,00</td>
-						<td>R$ 24,00</td>
-						<td>R$ 28,00</td>
-					</tr>
-					<tr>
-						<td>Portuguesa</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-						<td>R$ 20,00</td>
-						<td>R$ 22,00</td>
-					</tr>
-					<tr>
-						<td>4 Queijos</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-						<td>R$ 18,00</td>
-						<td>R$ 20,00</td>
-					</tr>
-					<tr>
-						<td>Marguerita</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-						<td>R$ 20,00</td>
-						<td>R$ 22,00</td>
-					</tr>
-					<tr>
-						<td>Calabresa</td>
-						<td>R$ 10,00</td>
-						<td>R$ 14,00</td>
-						<td>R$ 20,00</td>
-						<td>R$ 22,00</td>
-					</tr>
-					<tr>
-						<td>Frango c/ Catupiry</td>
-						<td>R$ 10,00</td>
-						<td>R$ 14,00</td>
-						<td>R$ 20,00</td>
-						<td>R$ 24,00</td>
-					</tr>
-					<tr>
-						<td>Mista</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-						<td>R$ 20,00</td>
-						<td>R$ 22,00</td>
-					</tr>
-					<tr>
-						<td>Cheddar</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-						<td>R$ 18,00</td>
-						<td>R$ 20,00</td>
-					</tr>
-					<tr>
-						<td>Camarão</td>
-						<td>R$ 15,00</td>
-						<td>R$ 17,00</td>
-						<td>R$ 25,00</td>
-						<td>R$ 32,00</td>
-					</tr>
+					<?php foreach ($produtos['P'] as $produto) { ?>
+						<tr>
+							<td><?=$produto['nome']?></td>
+							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
+							<td><?='R$ ' . number_format($produto['valorMedia'], 2, ',', '.')?></td>
+							<td><?='R$ ' . number_format($produto['valorGrande'], 2, ',', '.')?></td>
+							<td><?='R$ ' . number_format($produto['valorFamilia'], 2, ',', '.')?></td>
+						</tr>
+					<?php } ?>
 				</table>
 			</div>
-
 			<br><br><br>
+		<?php } ?>
 
-			<h1 id="texto">Calzones:</h1>
-
-			<div class="centralizado">
-				<table class="tabela">
-					<tr>
-						<th>Recheio</th>
-						<th>Pequeno</th>
-						<th>Médio</th>
-					</tr>
-					<tr>
-						<td>Mussarela</td>
-						<td>R$ 6,00</td>
-						<td>R$ 10,00</td>
-					</tr>
-					<tr>
-						<td>Calabresa</td>
-						<td>R$ 6,00</td>
-						<td>R$ 10,00</td>
-					</tr>
-					<tr>
-						<td>Carne de Sol</td>
-						<td>R$ 6,00</td>
-						<td>R$ 10,00</td>
-					</tr>
-				</table>
-			</div>
-
-			<br><br><br>
-
+		<?php if(count($produtos['D']) > 0) { ?>
 			<h1 id="texto">Pizza Doce:</h1>
-
 			<div class="centralizado">
 				<table class ="tabela">
 					<tr>
-						<th>Recheio</th>
-						<th>Pequeno</th>
-						<th>Médio</th>
+						<th scope="col">Sabor</th>
+						<th scope="col">Pequena</th>
+						<th scope="col">Média</th>
 					</tr>
-					<tr>
-						<td>Chocolate</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-					</tr>
-					<tr>
-						<td>Brigadeiro</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-					</tr>
-					<tr>
-						<td>Romeu e Julieta</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-					</tr>
-					<tr>
-						<td>Banana c/ Canela</td>
-						<td>R$ 10,00</td>
-						<td>R$ 12,00</td>
-					</tr>
+					<?php foreach ($produtos['D'] as $produto) { ?>
+						<tr>
+							<td><?=$produto['nome']?></td>
+							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
+							<td><?='R$ ' . number_format($produto['valorMedia'], 2, ',', '.')?></td>
+						</tr>
+					<?php } ?>
 				</table>
 			</div>
+			<br><br><br>
+		<?php } ?>
+
+		<?php if(count($produtos['C']) > 0) { ?>
+			<h1 id="texto">Calzones:</h1>
+			<div class="centralizado">
+				<table class="tabela">
+					<tr>
+						<th scope="col">Recheio</th>
+						<th scope="col">Pequeno</th>
+						<th scope="col">Médio</th>
+					</tr>
+					<?php foreach ($produtos['D'] as $produto) { ?>
+						<tr>
+							<td><?=$produto['nome']?></td>
+							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
+							<td><?='R$ ' . number_format($produto['valorMedia'], 2, ',', '.')?></td>
+						</tr>
+					<?php } ?>
+				</table>
+			</div>
+			<br><br><br>
+		<?php } ?>
+
+		<?php if(count($produtos['O']) > 0) { ?>
+			<h1 id="texto">Outros:</h1>
+			<div class="centralizado">
+				<table class="tabela">
+					<tr>
+						<th scope="col">Produto</th>
+						<th scope="col">Valor</th>
+					</tr>
+					<?php foreach ($produtos['O'] as $produto) { ?>
+						<tr>
+							<td><?=$produto['nome']?></td>
+							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
+						</tr>
+					<?php } ?>
+				</table>
+			</div>
+			<br><br><br>
+		<? } ?>
