@@ -1,5 +1,7 @@
 USE pizzaria;
 
+GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4dm1n';
+
 DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente (
   id int(11) NOT NULL AUTO_INCREMENT,
