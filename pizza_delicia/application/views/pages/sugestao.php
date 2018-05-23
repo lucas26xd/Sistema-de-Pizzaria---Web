@@ -13,7 +13,7 @@
 
 			<br>
 
-			<h3 id="texto al">
+			<h3 class="al" id="texto">
         &emsp;&emsp;Contamos com você para nos ajudar aumentar a cada dia a qualidade das
         nossas pizzas. Deixe um recadinho pra gente falando do que você gostou ou do que precisa ser melhorado. 
         Ficaremos gratos em poder atendê-lo cada vez melhor!
