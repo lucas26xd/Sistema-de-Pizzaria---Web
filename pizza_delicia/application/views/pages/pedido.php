@@ -41,7 +41,7 @@
 				</select>
 				<br><br>
         <div class="row justify-content-center">
-          <input type="reset" class="col" name="limpar" value="Limpar">
           <input type="submit" class="col" name="env" id="enviarpedido" value="Enviar">
+          <input type="reset" class="col" name="limpar" value="Limpar">          
         </div>
 			</form>

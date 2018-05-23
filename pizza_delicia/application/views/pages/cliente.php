@@ -9,6 +9,7 @@
             <th scope="col">E-mail</th>
             <th scope="col">Qtd. Pedidos</th>
             <th scope="col">Última Visita</th>
+            <th scope="col">Opções</th>
           </tr>
         </thead>
         <tbody>
@@ -23,11 +24,15 @@
             <td><?=$cliente['email']?></td>
             <td><?=$cliente['qtdPedidos']?></td>
             <td><?=$cliente['lastVisita']?></td>
+            <td class="text-center">
+              <a href="#" title="Editar"><i class="far fa-edit text-primary"></i></a>&ensp;
+              <a href="#" title="Excluir"><i class="fas fa-trash-alt text-danger"></i></a>
+            </td>
           </tr>
           <?php 
             }
           } else { ?>
-            <tr><td colspan="6"><b><i>Dados não encontrados!</i></b></td></tr>';  
+            <tr><td colspan="7"><b><i>Dados não encontrados!</i></b></td></tr>';  
           <?php } ?>
         </tbody>
       </table>

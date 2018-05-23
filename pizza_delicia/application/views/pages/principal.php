@@ -14,7 +14,7 @@
       <br><br>
 
       <h3 class="al">
-	      &nbsp;&nbsp;&nbsp;&nbsp;"Nós da PizzaDelicia estamos muito felizes em lhe atender. 
+	      &emsp;&emsp;"Nós da Pizza Delícia estamos muito felizes em lhe atender. 
         Estamos no ramo de pizzaria a mais de 25 anos, sempre com a missão de satisfazer 
         nossos clientes. Levando até você o prazer de saborear a mais deliciosa pizza do
         Ceará. Aqui você pode <a href="<?=site_url('pedido')?>">Realizar Pedido</a>,
