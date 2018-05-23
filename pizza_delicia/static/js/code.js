@@ -8,10 +8,20 @@
 
 var m = "Mensagem";
 
+// Configurações para máscara de telefone com 9º dígito opcional
+var maskBehavior = function (val) {
+  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+},
+options = {
+  onKeyPress: function(val, e, field, options) {
+    field.mask(maskBehavior.apply({}, arguments), options);
+  }
+};
+
 $( document ).ready(function() {
 	$("form, #gif, #gif3, .tabela").show(1000); //animação dos elementos
 
-	$('#tel').mask('(00) 00000-0000'); //colocando máscara no campo de telefone
+	$('#tel').mask(maskBehavior, options); // colocando máscara no campo de telefone
 	$('#troco').mask('##0,00', {reverse: true}); // colocando máscara no campo de troco
 
 	$('#troco').blur(function() {// colocando R$ na frente do valor do troco
