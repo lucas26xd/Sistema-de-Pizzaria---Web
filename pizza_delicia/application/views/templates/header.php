@@ -40,10 +40,12 @@
   	<header>
 
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-warning">
+      <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+
         <div class="container">
           <a class="navbar-brand" title="Pizza Delícia" href="<?=site_url('principal')?>">
-            <strong>Pizza Delícia</strong>
+            <img src="<?=base_url('static/imagens/logo.png')?>"  width="147" height="60" class="d-inline-block align-top" alt="">
+            <!--<strong>Pizza Delícia</strong>-->
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +73,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Cliente')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cliente')?>">Cliente</a>
-              </li>              
+              </li>
             </ul>
           </div>
         </div>
@@ -79,4 +81,4 @@
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">      
+    <main role="main" class="container">
