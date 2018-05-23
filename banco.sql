@@ -94,3 +94,13 @@ CREATE TABLE sugestao (
   msg text NOT NULL,
   data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id));
+
+  CREATE TABLE pizzaria.usuario (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(45) NOT NULL,
+    login VARCHAR(45) NOT NULL,
+    senha VARCHAR(45) NOT NULL,
+    lastVisita DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id));
+
+INSERT INTO pizzaria.usuario (nome, login, senha) VALUES ('Administrador', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'); -- login: admin e senha: admin
