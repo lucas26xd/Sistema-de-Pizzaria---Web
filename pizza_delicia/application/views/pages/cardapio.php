@@ -1,7 +1,7 @@
 
 		<?php if(count($produtos['P']) > 0) { ?>
 			<h1 id="texto">Pizzas:</h1>
-			<div class="centralizado">
+			<div class="table-responsive-sm">
 				<table class="tabela">
 					<tr>
 						<th scope="col">Sabor</th>
@@ -26,7 +26,7 @@
 
 		<?php if(count($produtos['D']) > 0) { ?>
 			<h1 id="texto">Pizza Doce:</h1>
-			<div class="centralizado">
+			<div class="table-responsive-sm">
 				<table class ="tabela">
 					<tr>
 						<th scope="col">Sabor</th>
@@ -47,7 +47,7 @@
 
 		<?php if(count($produtos['C']) > 0) { ?>
 			<h1 id="texto">Calzones:</h1>
-			<div class="centralizado">
+			<div class="table-responsive-sm">
 				<table class="tabela">
 					<tr>
 						<th scope="col">Recheio</th>
