@@ -6,11 +6,7 @@
 			 para melhor lhe atender.<br>Envie quantas sugestões quiser e quando achar necessário.
 		</p>
 		<hr>
-<<<<<<< HEAD
-		<p class="mb-0"><a class="alert-link" href="./">Página inicial</a></p>
-=======
 		<p class="mb-0"><a class="alert-link" href="<?=site_url('principal')?>">Página inicial</a></p>
->>>>>>> 9a731170d089985b9952a0cf769991460fb2e635
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>

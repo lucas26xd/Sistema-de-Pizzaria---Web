@@ -14,9 +14,9 @@ class Sugestao_model extends CI_Model {
   }
 
   public function insere_sugestao($clienteID, $msg) {
-    $dados = array('nome' => $nome, 'valorPequena' => $valorP, 'valorMedia' => $valorM, 'valorGrande' => $valorG, 'valorFamilia' => $valorF, 'categoria' => $categoria);
+    $dados = array('clienteID' => $clienteID, 'msg' => $msg);
     $query = $this->db->insert("produto", $dados);
-    return $query->result_array();
+    return $query;
   }
 
 }
