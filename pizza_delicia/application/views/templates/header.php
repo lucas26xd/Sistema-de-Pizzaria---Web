@@ -43,8 +43,8 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-warning">
 
         <div class="container">
-          <a class="navbar-brand" title="Pizza Delícia" href="<?=site_url('principal')?>">
-            <img src="<?=base_url('static/imagens/logo.png')?>"  width="147" height="60" class="d-inline-block align-top" alt="">
+          <a class="navbar-brand" href="<?=site_url('principal')?>" title="Pizza Delícia">
+            <img class="d-inline-block align-top" src="<?=base_url('static/imagens/logo.png')?>" height="60" alt="Pizza Delícia">
             <!--<strong>Pizza Delícia</strong>-->
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"

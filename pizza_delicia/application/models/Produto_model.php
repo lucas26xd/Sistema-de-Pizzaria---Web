@@ -8,6 +8,7 @@ class Produto_model extends CI_Model {
   }
 
   public function get_produtos($categoria = null) {
+    $this->db->order_by('nome', 'ASC');
     if ($categoria === null) {
       $query = $this->db->get('produto');
       return $query->result_array();
