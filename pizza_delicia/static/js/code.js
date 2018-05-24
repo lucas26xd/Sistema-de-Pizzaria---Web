@@ -30,7 +30,7 @@ $( document ).ready(function() {
 		this.form.troco.value = "R$ " + this.form.troco.value;
 	});
 
-	$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
+	//$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
 
 	$("#enviarsugestao").click(function(btn){ //ação do botão de sugestões
 		btn.preventDefault();
@@ -61,7 +61,11 @@ $( document ).ready(function() {
 
 	$("#remEnd").click(function(e) {
 			e.preventDefault();
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 9a731170d089985b9952a0cf769991460fb2e635
 			$("div.endereco").children().last().remove();
 		});
 });

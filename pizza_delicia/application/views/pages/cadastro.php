@@ -50,9 +50,9 @@
 				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Remover" width="40" height="40">
 				<br>
 				<label for="email">Email:</label>
-				<input type="text" name="email" id="email" placeholder="seuemail@email.com" onblur="validaEmail(this);">
+				<input type="text" name="email" id="email" placeholder="seuemail@email.com" onblur="validaEmail(this);" required>
 				<label for="senha">Senha:</label>
-				<input type="password" name="senha"  id="senha">
+				<input type="password" name="senha"  id="senha" required>
 				<br><br>
         <div class="row justify-content-center">
 				  <input type="submit" class="col" name="env" value="Cadastrar">
