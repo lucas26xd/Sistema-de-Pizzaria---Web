@@ -97,37 +97,6 @@ main {
   text-align: center;
 }
 
-nav.old {
-  /*border:1px solid #FF8F00;*/
-  width: auto;
-  background-color: #1B5E20; /*#FF6F00;*/
-  text-align: center;
-}
-
-nav.old ul {
-  list-style: none;
-  /*padding: 4px;*/
-}
-
-nav.old ul li {
-  display: inline-block;
-  font-family: Georgia, "Trebuchet MS", Arial, Helvetica, sans-serif;
-  font-style: oblique;
-  font-weight: normal;
-}
-
-nav.old ul li a {
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-  padding: 4px 20px;
-}
-
-nav.old ul li a:hover {
-  background-color: #E65100;
-  text-decoration: none;
-  color: white;
-}
 
 .texto {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
