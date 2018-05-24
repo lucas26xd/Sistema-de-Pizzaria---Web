@@ -57,15 +57,10 @@ $( document ).ready(function() {
 		var filhos = $("div.endereco").children().length;
 		filhos++;
 		$("div.endereco").append('<div class="form-row"><div class="col-sm-5"><label for="rua2">Rua 2:</label><input type="text" class="rua" name="rua2" id="rua2" placeholder="Sua rua de entrega 2"></div><div class="col-sm-2"><label for="num2">Número 2:</label><input type="text" class="num" name="num2" id="num2" placeholder="ex.: 320"></div><div class="col-sm"><label for="bairro2">Bairro 2:</label><input type="text" class="bairro" name="bairro2" id="bairro2" placeholder="Seu bairro"></div><div class="col-sm"><label for="cidade2">Cidade 2:</label><input type="text" class="cidade" name="cidade2" id="cidade2" placeholder="Sua cidade"><div></div></div></div>');
-		});
+	});
 
 	$("#remEnd").click(function(e) {
 			e.preventDefault();
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> 9a731170d089985b9952a0cf769991460fb2e635
 			$("div.endereco").children().last().remove();
 		});
 });
