@@ -77,6 +77,8 @@
             </ul>
           </div>
         </div>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">Login</a>
+
       </nav>
     </header>
 
