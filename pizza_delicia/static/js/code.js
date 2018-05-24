@@ -20,7 +20,7 @@ $( document ).ready(function() {
 		this.form.troco.value = "R$ " + this.form.troco.value;
 	});
 
-	$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
+	//$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
 
 	$("#enviarsugestao").click(function(btn){ //ação do botão de sugestões
 		btn.preventDefault();
@@ -47,13 +47,13 @@ $( document ).ready(function() {
 		var filhos = $("div.endereco").children().length;
 		filhos++;
 		$("div.endereco").append('<div><label for="rua'+ filhos + '">Rua ' + filhos + ':</label><input type="text" class="rua" ' +
-		'name="rua' + filhos + '" id="rua' + filhos + '" placeholder="Sua rua de entrega ' + filhos + '">' +
+		'name="rua' + filhos + '" id="rua' + filhos + '" placeholder="Sua rua de entrega ' + filhos + '" required>' +
 		'<label for="num'+ filhos + '">Número ' + filhos + ':</label><input type="text" class="num" ' +
-		'name="num' + filhos + '" id="num' + filhos + '" placeholder="ex.: 320">' +
+		'name="num' + filhos + '" id="num' + filhos + '" placeholder="ex.: 320" required>' +
 		'<label for="bairro'+ filhos + '">Bairro ' + filhos + ':</label><input type="text" class="bairro" ' +
-		'name="bairro' + filhos + '" id="bairro' + filhos + '" placeholder="Seu bairro">' +
+		'name="bairro' + filhos + '" id="bairro' + filhos + '" placeholder="Seu bairro" required>' +
 		'<label for="cidade'+ filhos + '">Cidade ' + filhos + ':</label><input type="text" class="cidade" ' +
-		'name="cidade' + filhos + '" id="cidade' + filhos + '" placeholder="Sua cidade"></div>');
+		'name="cidade' + filhos + '" id="cidade' + filhos + '" placeholder="Sua cidade" required></div>');
 		});
 
 	$("#remEnd").click(function(e) {
