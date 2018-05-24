@@ -49,10 +49,18 @@
 				<input id="addEnd" type="image" src="<?=base_url('static/imagens/addEnd.png')?>" alt="Adicionar" width="40" height="40">
 				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Remover" width="40" height="40">
 				<br>
-				<label for="email">Email:</label>
-				<input type="text" name="email" id="email" placeholder="seuemail@email.com" onblur="validaEmail(this);" required>
-				<label for="senha">Senha:</label>
-				<input type="password" name="senha"  id="senha" required>
+				<div class="form-row">
+						<div class="col-sm-8">
+							<label for="email">Email:</label>
+							<input type="text" class="form-control" name="email" id="email" placeholder="seuemail@email.com" onblur="validaEmail(this);" required>
+						</div>
+						<div class="col-sm">
+							<label for="senha">Senha:</label>
+							<input type="password" class="form-control" name="senha"  id="senha" required>
+						</div>
+				</div>
+
+
 				<br><br>
         <div class="row justify-content-center">
 				  <input type="submit" class="col" name="env" value="Cadastrar">
