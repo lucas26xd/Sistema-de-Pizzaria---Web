@@ -21,6 +21,7 @@
     <script type="text/javascript" src="<?=base_url('static/js/bootstrap.min.js')?>"></script>
     <script type="text/javascript" src="<?=base_url('static/js/jquery.mask.min.js')?>"></script>
     <script type="text/javascript" src="<?=base_url('static/js/code.js')?>"></script>
+    <script type="text/javascript" src="<?=base_url('static/js/teste.js')?>"></script>
 
   </body>
 

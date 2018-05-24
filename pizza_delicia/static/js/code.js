@@ -8,10 +8,20 @@
 
 var m = "Mensagem";
 
+// Configurações para máscara de telefone com 9º dígito opcional
+var maskBehavior = function (val) {
+  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+},
+options = {
+  onKeyPress: function(val, e, field, options) {
+    field.mask(maskBehavior.apply({}, arguments), options);
+  }
+};
+
 $( document ).ready(function() {
 	$("form, #gif, #gif3, .tabela").show(1000); //animação dos elementos
 
-	$('#tel').mask('(00) 00000-0000'); //colocando máscara no campo de telefone
+	$('#tel').mask(maskBehavior, options); // colocando máscara no campo de telefone
 	$('#troco').mask('##0,00', {reverse: true}); // colocando máscara no campo de troco
 
 	$('#troco').blur(function() {// colocando R$ na frente do valor do troco
@@ -46,18 +56,12 @@ $( document ).ready(function() {
 		e.preventDefault();
 		var filhos = $("div.endereco").children().length;
 		filhos++;
-		$("div.endereco").append('<div><label for="rua'+ filhos + '">Rua ' + filhos + ':</label><input type="text" class="rua" ' +
-		'name="rua' + filhos + '" id="rua' + filhos + '" placeholder="Sua rua de entrega ' + filhos + '" required>' +
-		'<label for="num'+ filhos + '">Número ' + filhos + ':</label><input type="text" class="num" ' +
-		'name="num' + filhos + '" id="num' + filhos + '" placeholder="ex.: 320" required>' +
-		'<label for="bairro'+ filhos + '">Bairro ' + filhos + ':</label><input type="text" class="bairro" ' +
-		'name="bairro' + filhos + '" id="bairro' + filhos + '" placeholder="Seu bairro" required>' +
-		'<label for="cidade'+ filhos + '">Cidade ' + filhos + ':</label><input type="text" class="cidade" ' +
-		'name="cidade' + filhos + '" id="cidade' + filhos + '" placeholder="Sua cidade" required></div>');
+		$("div.endereco").append('<div class="form-row"><div class="col-sm-5"><label for="rua2">Rua 2:</label><input type="text" class="rua" name="rua2" id="rua2" placeholder="Sua rua de entrega 2"></div><div class="col-sm-2"><label for="num2">Número 2:</label><input type="text" class="num" name="num2" id="num2" placeholder="ex.: 320"></div><div class="col-sm"><label for="bairro2">Bairro 2:</label><input type="text" class="bairro" name="bairro2" id="bairro2" placeholder="Seu bairro"></div><div class="col-sm"><label for="cidade2">Cidade 2:</label><input type="text" class="cidade" name="cidade2" id="cidade2" placeholder="Sua cidade"><div></div></div></div>');
 		});
 
 	$("#remEnd").click(function(e) {
 			e.preventDefault();
+
 			$("div.endereco").children().last().remove();
 		});
 });

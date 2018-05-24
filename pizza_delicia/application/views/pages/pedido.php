@@ -1,6 +1,7 @@
-<div id="sucessopedido" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+      <div id="sucessopedido" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
 				<h4 class="alert-heading">Sucesso!</h4>
-				<p>Seu pedido foi realizado com Sucesso!<br>Em alguns minutos você irá ter a melhor sensação possível ao saborear a nossa pizza! Obrigado e bom apetite!</p>
+				<p>Seu pedido foi realizado com Sucesso!
+        <br>Em alguns minutos você irá ter a melhor sensação possível ao saborear a nossa pizza! Obrigado e bom apetite!</p>
 				<hr>
 				<p class="mb-0"><a class="alert-link" href="./">Página inicial</a></p>
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -16,7 +17,7 @@
 				<label for="troco">Troco para:</label>
 				<input type="text" name="troco" id="troco" placeholder="ex.: R$ 20,00">
 				<label for="tel">Telefone:</label>
-				<input type="text" name="tel"  id="tel" placeholder="(88) 9 9999 9999">
+				<input type="text" name="tel"  id="tel" placeholder="(88) 99999-9999">
 				<label for="pedido">Pedido:</label>
 				<select name="cardapio" id="pedido">
 					<option value="0" selected>Selecione seu Pedido...</option>
