@@ -11,7 +11,7 @@
 			<span aria-hidden="true">&times;</span>
 		</button>
 	</div>
-	<div id="errosugestao" class="alert alert-info alert-dismissible fade show" role="alert" style="display: none;">
+	<div id="errosugestao" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
 		<h4 class="alert-heading">Erro!</h4>
 		<p>
 			 Você precisa está logado!<br>Por uma questão de organização e autenticidade. Fique tranquilo, seus dados e sugestões são totalmente guardados em sigilo.

@@ -1,5 +1,5 @@
 			<h1>Clientes</h1>
-
+		<div class="table-responsive-xl">
       <table class="table table-striped table-bordered table-hover">
         <thead class="bg-warning">
           <tr>
@@ -13,9 +13,9 @@
           </tr>
         </thead>
         <tbody>
-          <?php 
+          <?php
           if (count($clientes)) {
-            foreach ($clientes as $cliente) { 
+            foreach ($clientes as $cliente) {
           ?>
           <tr>
             <th scope="row"><?=$cliente['id']?></th>
@@ -29,10 +29,12 @@
               <a href="#" title="Excluir"><i class="fas fa-trash-alt text-danger"></i></a>
             </td>
           </tr>
-          <?php 
+          <?php
             }
           } else { ?>
-            <tr><td colspan="7"><b><i>Dados não encontrados!</i></b></td></tr>';  
+            <tr><td colspan="7"><b><i>Dados não encontrados!</i></b></td></tr>';
           <?php } ?>
         </tbody>
       </table>
+
+			</div>
