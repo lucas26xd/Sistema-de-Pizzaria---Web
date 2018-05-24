@@ -56,18 +56,12 @@ $( document ).ready(function() {
 		e.preventDefault();
 		var filhos = $("div.endereco").children().length;
 		filhos++;
-		$("div.endereco").append('<div><label for="rua'+ filhos + '">Rua ' + filhos + ':</label><input type="text" class="rua" ' +
-		'name="rua' + filhos + '" id="rua' + filhos + '" placeholder="Sua rua de entrega ' + filhos + '">' +
-		'<label for="num'+ filhos + '">Número ' + filhos + ':</label><input type="text" class="num" ' +
-		'name="num' + filhos + '" id="num' + filhos + '" placeholder="ex.: 320">' +
-		'<label for="bairro'+ filhos + '">Bairro ' + filhos + ':</label><input type="text" class="bairro" ' +
-		'name="bairro' + filhos + '" id="bairro' + filhos + '" placeholder="Seu bairro">' +
-		'<label for="cidade'+ filhos + '">Cidade ' + filhos + ':</label><input type="text" class="cidade" ' +
-		'name="cidade' + filhos + '" id="cidade' + filhos + '" placeholder="Sua cidade"></div>');
+		$("div.endereco").append('<div class="form-row"><div class="col-sm-5"><label for="rua2">Rua 2:</label><input type="text" class="rua" name="rua2" id="rua2" placeholder="Sua rua de entrega 2"></div><div class="col-sm-2"><label for="num2">Número 2:</label><input type="text" class="num" name="num2" id="num2" placeholder="ex.: 320"></div><div class="col-sm"><label for="bairro2">Bairro 2:</label><input type="text" class="bairro" name="bairro2" id="bairro2" placeholder="Seu bairro"></div><div class="col-sm"><label for="cidade2">Cidade 2:</label><input type="text" class="cidade" name="cidade2" id="cidade2" placeholder="Sua cidade"><div></div></div></div>');
 		});
 
 	$("#remEnd").click(function(e) {
 			e.preventDefault();
+      
 			$("div.endereco").children().last().remove();
 		});
 });

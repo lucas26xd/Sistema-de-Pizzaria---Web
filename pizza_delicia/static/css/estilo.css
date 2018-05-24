@@ -254,17 +254,6 @@ textarea {
   /*float: right;*/
 }
 
-.rua {
-  /*float: left;*/
-  width: 60%;
-  margin-right: 30px;
-}
-.num {
-  /*float: right;*/
-  width: 30%;
-}
-
-
 .form-signin {
   width: 100%;
   max-width: 420px;
