@@ -22,7 +22,6 @@ main {
 .slider {
   /* text-align: center; */
   /* padding: 15px; */
-  
 
   width: 100%;
   height: 400px;
@@ -149,10 +148,7 @@ nav.old ul li a:hover {
 }
 
 #gif3 {
-  width: 15%;
-  float: left;
-  margin-right: -200px;
-  margin-left:  200px;
+  width: 90%;
   display: none;
 }
 
@@ -283,9 +279,7 @@ textarea {
   resize: none;
 }
 
-.pizzas {
-  width: 345px;
-}
+
 
 .endereco label {
   font-family: Georgia, "Trebuchet MS", Arial, Helvetica, sans-serif;
