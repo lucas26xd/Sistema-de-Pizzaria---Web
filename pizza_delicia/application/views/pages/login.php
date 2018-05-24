@@ -8,20 +8,20 @@
         }
       </style>
 
-      <form class="form-signin" action="<?=site_url('principal')?>">
+      <form method="post" class="form-signin" action="<?=site_url('principal')?>">
         <div class="text-center mb-4">
           <img class="mb-4" src="<?=base_url('static/imagens/logo.png');?>" alt="Pizza Delícia" height="72">
           <h1 class="h3 mb-3 font-weight-normal"><?=$title?> - Pizza Delícia</h1>
         </div>
 
         <div class="form-label-group">
-          <label for="inputEmail">E-mail:</label><br>
-          <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
+          <label for="login">E-mail:</label><br>
+          <input type="email" id="login" class="form-control" placeholder="E-mail" required autofocus>
         </div>
           <br>
         <div class="form-label-group">
-          <label for="inputPassword">Senha:</label><br>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+          <label for="senha">Senha:</label><br>
+          <input type="password" id="senha" class="form-control" placeholder="Senha" required>
         </div>
           <br>
         <div class="checkbox mb-3">

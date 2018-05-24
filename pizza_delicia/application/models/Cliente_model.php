@@ -17,6 +17,18 @@ class Cliente_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function valida_login($login, $senha) {
+    $query = $this->db->get_where('cliente', array('email' => $login, "senha" => sha1($senha)));
+    $query = $query->row_array();
+    if(count($query) > 0){//se login e senha estão corretos
+      $this->db->where('id', $query['id']);
+      $this->db->update('cliente', array('lastVisita' => "default"));//atualiza ultima visita
+      return $query['id'];
+    }else{
+      return 0;
+    }
+  }
+
   public function insere_cliente($nome, $tel, $email, $senha, $endereco) {
     $dados = array('nome' => $nome, 'telefone' => $tel, 'email' => $email, 'senha' => sha1($senha));
     $query = $this->db->insert("cliente", $dados);
