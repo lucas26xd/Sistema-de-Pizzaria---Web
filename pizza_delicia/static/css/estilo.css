@@ -22,12 +22,14 @@ main {
 .slider {
   /* text-align: center; */
   /* padding: 15px; */
-  margin: 20px auto;
-  width: 900px;
+  
+
+  width: 100%;
   height: 400px;
   position: relative;
   overflow: hidden;
 }
+
 
 .foto {
   position: absolute;
@@ -136,7 +138,7 @@ nav.old ul li a:hover {
 }
 
 #gif {
-  height: 300px;
+  height: auto;
   float: left;
   display: none;
 }
