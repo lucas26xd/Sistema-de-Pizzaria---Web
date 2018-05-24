@@ -26,13 +26,13 @@
           <h1 class="h3 mb-3 font-weight-normal"><?=$title?> - Pizza Delícia</h1>
         </div>
 
-        <div class="form-label-group">
-          <label for="inputEmail">E-mail</label>
+        <div class="form-label">
+          <!--label for="inputEmail">E-mail</label-->
           <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
         </div>
 
-        <div class="form-label-group">
-          <label for="inputPassword">Senha</label>
+        <div class="form-label">
+          <!--label for="inputPassword">Senha</label-->
           <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
         </div>
 
