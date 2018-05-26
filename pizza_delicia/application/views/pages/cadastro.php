@@ -46,8 +46,8 @@
 
 			</div>
 
-				<input id="addEnd" type="image" src="<?=base_url('static/imagens/addEnd.png')?>" alt="Adicionar" width="40" height="40">
-				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Remover" width="40" height="40">
+				<input id="addEnd" type="image" src="<?=base_url('static/imagens/addEnd.png')?>" alt="Adicionar" width="30" height="30">
+				<input id="remEnd" type="image" src="<?=base_url('static/imagens/remEnd.png')?>" alt="Remover" width="30" height="30">
 				<br>
 				<div class="form-row">
 						<div class="col-sm-8">
