@@ -1,7 +1,5 @@
 USE pizzaria;
 
-GRANT ALL ON pizzaria.* TO admin IDENTIFIED BY '4dm1n';
-
 DROP TABLE IF EXISTS endereco;
 DROP TABLE IF EXISTS cliente;
 DROP TABLE IF EXISTS itensPedido;
@@ -101,3 +99,7 @@ CREATE TABLE usuario (
     PRIMARY KEY (id));
 
 INSERT INTO usuario (nome, login, senha) VALUES ('Administrador', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'); -- login: admin e senha: admin
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '4dm1n';
+GRANT ALL PRIVILEGES ON pizzaria.* TO 'admin'@'localhost';
+FLUSH PRIVILEGES;
