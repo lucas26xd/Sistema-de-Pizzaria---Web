@@ -25,25 +25,40 @@
 
 				<input type="hidden" name="qtdEnd" id="qtdEnd">
 				<div class="endereco">
-					<div class="form-row">
-							<div class="col-sm-5">
-									<label for="rua1">Rua 1:</label>
-									<input type="text" class="form-control" name="rua1" id="rua1" placeholder="Sua rua de entrega 1" required>
-							</div>
-							<div class="col-sm-2">
-								<label for="num1">Número 1:</label>
-								<input type="text" class="form-control" name="num1" id="num1" placeholder="ex.: 320" required>
+					<div class="border border-warning rounded">
+						<div class="form-row">
+							<div class="col-sm-0.5">
 							</div>
 							<div class="col-sm">
-								<label for="bairro1">Bairro 1:</label>
-								<input type="text" class="form-control" name="bairro1" id="bairro1" placeholder="Seu bairro" required>
+								<label for="end">Endereço 1: </label>
 							</div>
-							<div class="col-sm">
-								<label for="cidade1">Cidade 1:</label>
-								<input type="text" class="form-control" name="cidade1" id="cidade1" placeholder="Sua cidade" required>
-							</div>
-					</div>
+						</div>
+						<div class="form-row">
+							<div class="col-sm-0.5">
 
+							</div>
+								<div class="col-sm-5">
+										<label for="rua1">Rua 1:</label>
+										<input type="text" class="form-control" name="rua1" id="rua1" placeholder="Sua rua de entrega 1" required>
+								</div>
+								<div class="col-sm-2">
+									<label for="num1">Número 1:</label>
+									<input type="text" class="form-control" name="num1" id="num1" placeholder="ex.: 320" required>
+								</div>
+								<div class="col-sm">
+									<label for="bairro1">Bairro 1:</label>
+									<input type="text" class="form-control" name="bairro1" id="bairro1" placeholder="Seu bairro" required>
+								</div>
+								<div class="col-sm">
+									<label for="cidade1">Cidade 1:</label>
+									<input type="text" class="form-control" name="cidade1" id="cidade1" placeholder="Sua cidade" required>
+								</div>
+								<div class="col-sm-0.5">
+
+								</div>
+						</div>
+					</div>
+					
 			</div>
 
 				<input id="addEnd" type="image" src="<?=base_url('static/imagens/addEnd.png')?>" alt="Adicionar" width="30" height="30">
