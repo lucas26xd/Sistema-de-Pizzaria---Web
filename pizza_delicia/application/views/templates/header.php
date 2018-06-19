@@ -76,8 +76,12 @@
               </li>
             </ul>
           </div>
-          <a class="btn btn-outline-dark my-2 my-sm-0 m-3" href="<?=site_url('carrinho')?>" role="button">Carrinho</a>
-          <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">Login</a>
+          <a class="btn btn-outline-dark my-2 my-sm-0 m-3" href="<?=site_url('carrinho')?>" role="button">
+            <img class="d-inline-block align-top" src="<?=base_url('static/imagens/carrinho.png')?>" height="20" alt="Carrinho">
+            Carrinho</a>
+          <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
+            <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
+            Login</a>
 
         </div>
 
