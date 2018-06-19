@@ -1,8 +1,9 @@
 	<?php if(count($pedidos) > 0) { ?>
 		<form id="carrinho" method="post" action="" style="display: none" onsubmit="return verificaCompra(this);">
 			<div class="table-responsive-sm">
-				<table class="tabela">
-					<tr>
+				<table class="table table-sm">
+					<caption>*Seus Pedidos*</caption>
+					<tr class="table-success" >
 						<th scope="col">Produto</th>
 						<th scope="col">Tamanho</th>
 						<th scope="col">Quantidade</th>
