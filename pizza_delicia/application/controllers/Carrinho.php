@@ -28,8 +28,10 @@ class Carrinho extends CI_Controller {
       $this->cliente_model->insere_cliente($nome, $tel, $email, $senha, $endereco);//insere cliente e seus endereços respectivos
     }
     */
-    $data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')));
-    $data['enderecos'] = array(array('rua' => 'Rua 08 de janeiro', 'numero' => "106", 'bairro' => 'Brasília', 'cidade' => 'Cruz'));
+    $this->load->model('cliente_model');
+    $data['enderecos'] = $this->cliente_model->get_enderecos(27);
+    $data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')), array('nome' => 'Pizza de Fangro', 'tamanho' => array('P', 'M', 'G', 'F')));
+    //$data['enderecos'] = array(array('rua' => 'Rua 08 de janeiro', 'numero' => "106", 'bairro' => 'Brasília', 'cidade' => 'Cruz'));
 
     $data['title'] = ucfirst($page);
     $this->load->view('templates/header', $data);

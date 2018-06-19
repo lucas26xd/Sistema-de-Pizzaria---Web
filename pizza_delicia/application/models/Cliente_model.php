@@ -17,6 +17,11 @@ class Cliente_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function get_enderecos($clienteID) {
+    $query = $this->db->get_where('endereco', array('clienteID' => $clienteID));
+    return $query->result_array();
+  }
+
   public function valida_login($login, $senha) {
     $query = $this->db->get_where('cliente', array('email' => $login, "senha" => sha1($senha)));
     $query = $query->row_array();

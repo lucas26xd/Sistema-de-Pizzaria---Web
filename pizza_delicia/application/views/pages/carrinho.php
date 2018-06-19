@@ -34,7 +34,7 @@
 
 			<h3>Entrega:</h3>
 			<?php foreach ($enderecos as $endereco) { ?>
-				<input type="radio" name="endereco" value=<?=$endereco['numero'].$endereco['cidade']?> checked> <?=$endereco['rua'].", ".$endereco['numero'].", ".$endereco['bairro'].", ".$endereco['cidade']?><br>
+				<input type="radio" name="endereco" value=<?=$endereco['numero'].$endereco['cidade']?> checked> <?=$endereco['rua'].", ".$endereco['num'].", ".$endereco['bairro'].", ".$endereco['cidade']?><br>
 			<?php } ?>
 
 			<br><br>
