@@ -23,7 +23,7 @@
 										<?php for ($i=1; $i < 6; $i++) { ?>
 											<option value=<?="qtd".$i?>><?=$i?></option>
 										<?php } ?>
-									</select><td>
+									</select></td>
 							<td><input type="text" name=<?="valor".$pedido['nome']?> disabled></td>
 						</tr>
 					<?php } ?>
