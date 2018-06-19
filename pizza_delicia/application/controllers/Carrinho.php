@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cadastro extends CI_Controller {
+class Carrinho extends CI_Controller {
 
   /**
    * Página de Cadastro do sistema Pizzaria Delícia.
    *
    */
-  public function index($page = 'cadastro') {
-    @ $nome = ucfirst($_POST["nome"]);
+  public function index($page = 'carrinho') {
+    /*@ $nome = ucfirst($_POST["nome"]);
     @ $tel = $_POST["tel"];
     @ $email = $_POST["email"];
     @ $senha = $_POST["senha"];
@@ -27,6 +27,9 @@ class Cadastro extends CI_Controller {
       $this->load->model('cliente_model');
       $this->cliente_model->insere_cliente($nome, $tel, $email, $senha, $endereco);//insere cliente e seus endereços respectivos
     }
+    */
+    $data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')));
+    $data['enderecos'] = array(array('rua' => 'Rua 08 de janeiro', 'numero' => "106", 'bairro' => 'Brasília', 'cidade' => 'Cruz'));
 
     $data['title'] = ucfirst($page);
     $this->load->view('templates/header', $data);
