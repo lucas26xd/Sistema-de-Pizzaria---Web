@@ -53,30 +53,32 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Principal')) echo 'active font-weight-bold'; ?>" href="<?=site_url('principal')?>">Principal</a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Cardapio')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cardapio')?>">Cardápio</a>
               </li>
               <!--<li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Promocao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('promocao')?>">Promoções</a>
               </li>-->
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Pedido')) echo 'active font-weight-bold'; ?>" href="<?=site_url('pedido')?>">Realizar Pedidos</a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Sugestao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('sugestao')?>">Sugestões</a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Cadastro')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cadastro')?>">Cadastro</a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Cliente')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cliente')?>">Cliente</a>
               </li>
             </ul>
           </div>
+          <a class="btn btn-outline-dark my-2 my-sm-0 m-3" href="<?=site_url('carrinho')?>" role="button">Carrinho</a>
           <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">Login</a>
+
         </div>
 
 
