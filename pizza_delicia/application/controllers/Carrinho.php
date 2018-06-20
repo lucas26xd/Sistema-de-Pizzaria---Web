@@ -73,8 +73,9 @@ class Carrinho extends CI_Controller {
     $this->pedido_model->atualiza_valor_pedido($pedidoID, $valorProduto);
   }
 
-  public function cadastra_pedido($prodID, $valorP){
+  public function cadastra_pedido($prodID){
     $this->load->model('pedido_model');
+    $this->load->model('produto_model');
 
     if($this->session->has_userdata('id'))
       $idLogado = $this->session->userdata('id');
@@ -86,6 +87,7 @@ class Carrinho extends CI_Controller {
         $this->pedido_model->insere_pedido($idLogado);
         $pedidoID = $this->pedido_model->get_lastpedido_cliente($idLogado);
       }
+      $valorP = $this->pedido_model->get_produto($prodID, 'valorPequena');
       $this->pedido_model->insere_item_pedido($pedidoID, $prodID, $valorP);
     }
   }
