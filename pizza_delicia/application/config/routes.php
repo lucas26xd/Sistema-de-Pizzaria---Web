@@ -52,3 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'principal';  // LINHA ALTERADA
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['logar'] = "Login/Logar";
+$route['encerrar-sessao'] = "Principal/EncerrarSessao";
+$route['encerrar-sessoes'] = "Principal/EncerrarSessoes";
+$route['sessao-temporizada'] = "Principal/SessaoTemporizada";

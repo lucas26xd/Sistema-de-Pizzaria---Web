@@ -8,12 +8,12 @@ class Principal extends CI_Controller {
    *
    */
   public function index($page = 'principal'){
-    session_start();
-    @ $login = ucfirst($_POST["login"]);
-    @ $senha = ucfirst($_POST["senha"]);
-    $this->load->model('cliente_model');
+    //session_start();
+    //@ $login = ucfirst($_POST["login"]);
+    //@ $senha = ucfirst($_POST["senha"]);
+    //$this->load->model('cliente_model');
 
-    @ $_SESSION[‘id’] = $this->cliente_model->valida_login($login, $senha);
+    //@ $_SESSION[‘id’] = $this->cliente_model->valida_login($login, $senha);
     //if (@ $_SESSION[‘id’]) {
       $data['title'] = ucfirst($page);
       $this->load->view('templates/header', $data);
@@ -29,4 +29,24 @@ class Principal extends CI_Controller {
 
     $this->load->view('templates/footer');
   }
+  
+
+	public function EncerrarSessao()
+	{
+		$this->session->unset_userdata('usuario');
+		$this->session->set_flashdata('sessao-encerrada','Você encerrou sua sessão.');
+		redirect();
+	}
+
+	public function SessaoTemporizada()
+	{
+		$this->session->set_tempdata('sessao-temporizada', '10 segundos', 10);
+		redirect();
+	}
+
+	public function EncerrarSessoes()
+	{
+		$this->session->sess_destroy();
+		redirect();
+	}
 }

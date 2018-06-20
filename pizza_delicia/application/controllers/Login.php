@@ -13,4 +13,9 @@ class Login extends CI_Controller {
     $this->load->view('pages/'.$page, $data);
     $this->load->view('templates/footer');
   }
+  public function Logar()
+	{
+		$this->session->set_userdata('usuario',$this->input->post('nome'));
+		redirect();
+	}
 }
