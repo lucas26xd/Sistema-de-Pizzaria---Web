@@ -47,4 +47,11 @@ class Cliente_model extends CI_Model {
     return $query;
   }
 
+  public function altera_cliente($nome, $tel, $email, $senha, $endereco) {
+    $dados = array('nome' => $nome, 'telefone' => $tel, 'email' => $email, 'senha' => sha1($senha));
+    $this->db->where('id',$this->session->userdata('id'));
+    $query = $this->db->update("cliente", $dados);
+
+    return $query;
+  }
 }
