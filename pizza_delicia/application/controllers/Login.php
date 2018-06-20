@@ -15,8 +15,16 @@ class Login extends CI_Controller {
   }
   public function Logar()
 	{
-		$this->session->set_userdata('usuario',$this->input->post('nome'));
-    $this->session->set_userdata('senha',$this->input->post('senha'));
+    $user = $this->input->post('nome');
+    $senha = $this->input->post('senha');
+    $this->load->model('cliente_model');
+
+    $clienteID = $this->cliente_model->valida_login($user, $senha);
+
+    $this->session->set_userdata('id', $clienteID);
+    $this->session->set_userdata('usuario', $user);
+    $this->session->set_userdata('senha', $senha);
+
 		redirect('Login');
 	}
   public function EncerrarSessoes()

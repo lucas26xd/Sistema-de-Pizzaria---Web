@@ -23,7 +23,7 @@ class Cliente_model extends CI_Model {
   }
 
   public function valida_login($login, $senha) {
-    $query = $this->db->get_where('cliente', array('email' => $login, "senha" => sha1($senha)));
+    $query = $this->db->get_where('cliente', array('email' => $login, 'senha' => sha1($senha)));
     $query = $query->row_array();
     if(count($query) > 0){//se login e senha estão corretos
       $this->db->where('id', $query['id']);

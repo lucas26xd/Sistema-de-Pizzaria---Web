@@ -88,6 +88,21 @@
           <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
             <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
             Login</a>
+            <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Opções
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
+      <button class="dropdown-item" type="button">
+        <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
+        Login</button></a>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('cadastro')?>" role="button">
+          <button class="dropdown-item" type="button">
+            <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
+            Cadastro</button></a>
+  </div>
+</div>
 
         </div>
 
