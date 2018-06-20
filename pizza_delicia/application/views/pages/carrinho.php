@@ -9,22 +9,22 @@
 						<th scope="col">Valor</th>
 					</tr>
 					<?php foreach ($pedidos as $pedido) { ?>
-						<tr>
+						<tr id=<?=$pedido['id']?>>
 							<td><?=$pedido['nome']?></td>
-							<td><select>
+							<td><select class="tamPedido">
 										<?php foreach ($pedido['tamanho'] as $t) { ?>
 											<option value=<?="tam".$t?>><?=$t?></option>
 										<?php } ?>
 									</select>
 							</td>
-							<td><select>
+							<td><select class="qtdPedido">
 										<option value="qtd0">0</option>
 										<option value="qtdmeia">1/2</option>
 										<?php for ($i=1; $i < 6; $i++) { ?>
 											<option value=<?="qtd".$i?> <?=($i == 1) ? 'selected' : ''?>><?=$i?></option>
 										<?php } ?>
 									</select></td>
-							<td><input type="text" name=<?="valor".$pedido['nome']?> disabled></td>
+							<td><input type="text" name=<?="valor".$pedido['id']?> disabled></td>
 						</tr>
 					<?php } ?>
 

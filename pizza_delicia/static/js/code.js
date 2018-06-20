@@ -30,6 +30,68 @@ $( document ).ready(function() {
 		this.form.troco.value = "R$ " + this.form.troco.value;
 	});
 
+  $('.tamPedido').change(function(a){
+      //alert('Mudou!');
+      /*console.log(a);
+      a.originalEvent.path[2].children[3].children[0].value = "oi";
+      alert(a.originalEvent.path[2].children[1].children[0].val);
+      console.log($('.tamPedido option:selected').text());*/
+      var request = $.ajax({
+        url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/calculaTotal/",
+        method: "POST",
+        data: { id: a.originalEvent.path[2].id,
+                tam: a.originalEvent.path[2].children[1].children[0].value.substring(3),
+                qtd: a.originalEvent.path[2].children[2].children[0].value.substring(3)}
+      });
+
+      request.done(function( msg ){
+          alert("Deu bom! "+msg);
+      });
+
+      request.fail(function( jqXHR, textStatus ) {
+          alert("Deu ruim! "+textStatus);
+          console.log(jqXHR);
+      });
+  });
+
+  $('.qtdPedido').change(function(a){
+    console.log(a);
+    a.originalEvent.path[2].children[3].children[0].value = "oi";
+    var x = a.originalEvent.path[2].children[2].children[0].value;
+    if(x == "qtd0"){
+      var request = $.ajax({
+        url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/apagaPedido/",
+        method: "POST",
+        data: { id: a.originalEvent.path[2].id}
+      });
+
+      request.done(function( msg ){
+          alert("Deu bom! "+msg);
+      });
+
+      request.fail(function( jqXHR, textStatus ) {
+          alert("Deu ruim! "+jqXHR+" <-> "+textStatus);
+      });
+    }else{
+      var request = $.ajax({
+        url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/calculaTotal/",
+        method: "POST",
+        data: { id: a.originalEvent.path[2].id,
+                tam: a.originalEvent.path[2].children[1].children[0].value.substring(3),
+                qtd: x.substring(3)}
+      });
+
+      request.done(function( msg ){
+          alert("Deu bom! "+msg);
+      });
+
+      request.fail(function( jqXHR, textStatus ) {
+        alert("Deu ruim! "+textStatus);
+        console.log(jqXHR);
+      });
+    }
+  });
+
 	//$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
 
 	$("#enviarsugestao").click(function(btn){ //ação do botão de sugestões

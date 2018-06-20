@@ -54,4 +54,28 @@ class Carrinho extends CI_Controller {
     $this->load->view('pages/'.$page, $data);
     $this->load->view('templates/footer');
   }
+
+  public function apagaPedido(){
+    $this->load->model('pedido_model');
+    $id = $_POST["id"];
+    $this->pedido_model->apaga_item_pedido($id);
+  }
+
+  public function calculaTotal(){
+    $this->load->model('pedido_model');
+    $this->load->model('produto_model');
+    $id = $_POST["id"];
+    $tam = $_POST["tam"];
+    $qtd = $_POST["qtd"];
+    $prodID = $this->pedido_model->get_item_pedido($id, 'prodID');
+    $campo = 'valorPequena';
+    if($tam == 'M')
+      $campo = 'valorMedia';
+    else if($tam == 'G')
+      $campo = 'valorGrande';
+    else if($tam == 'F')
+      $campo = 'valorFamilia';
+    $valor = $this->produto_model->get_produto($prodID, $campo);
+    $this->pedido_model->atualiza_item_pedido($id, $qtd, $valor);
+  }
 }

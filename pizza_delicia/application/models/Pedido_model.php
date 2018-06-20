@@ -20,22 +20,28 @@ class Pedido_model extends CI_Model {
   public function atualiza_valor_pedido($id, $valor) {
     $dados = array('valor' => $valor);
     $this->db->where('id', $id);
-    $this->db->update('pedido', $data);
-    return $query->result_array();
+    $this->db->update('pedido', $dados);
   }
 
   public function atualiza_status_pedido($id, $status) {
     $dados = array('status' => $status);
     $this->db->where('id', $id);
-    $this->db->update('pedido', $data);
-    return $query->result_array();
+    $this->db->update('pedido', $dados);
   }
 
   public function atualiza_item_pedido($id, $qtd, $valor) {
     $dados = array('qtd' => $qtd, 'valor' => $valor);
     $this->db->where('id', $id);
-    $this->db->update('itensPedido', $data);
-    return $query->result_array();
+    $this->db->update('itensPedido', $dados);
+  }
+
+  public function get_item_pedido($id, $campo = '*') {//seleciona campo do produto q desejar
+    $this->db->select($campo);
+    $query = $this->db->get_where('itensPedido', array('id' => $id));
+    if($campo == '*')
+      return $query->result_array();
+    else
+      return $query->result_array()[0][$campo];
   }
 
   public function apaga_item_pedido($id){
