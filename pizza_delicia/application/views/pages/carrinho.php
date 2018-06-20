@@ -27,7 +27,7 @@
 										<?php } ?>
 									</select>
 							</td>
-							<td><input type="text" name=<?="valor".$pedido['id']?> disabled></td>
+							<td><?="R$ ".number_format($pedido['valor'], 2, ',', '.')?></td>
 						</tr>
 					<?php } ?>
 
