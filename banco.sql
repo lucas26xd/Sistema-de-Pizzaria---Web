@@ -1,11 +1,11 @@
 USE pizzaria;
 
+DROP TABLE IF EXISTS sugestao;
 DROP TABLE IF EXISTS endereco;
 DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS produto;
 DROP TABLE IF EXISTS itensPedido;
 DROP TABLE IF EXISTS pedido;
-DROP TABLE IF EXISTS produto;
-DROP TABLE IF EXISTS sugestao;
 
 CREATE TABLE cliente (
   id int(11) NOT NULL AUTO_INCREMENT,
@@ -79,7 +79,7 @@ CREATE TABLE itensPedido (
   REFERENCES pedido (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
-  CONSTRAINT fk_itensPedido_prod 
+  CONSTRAINT fk_itensPedido_prod
   FOREIGN KEY (prodID)
   REFERENCES produto (id)
   ON DELETE NO ACTION
