@@ -57,7 +57,7 @@
                 <a class="nav-link <?php if (!strcmp($title,'Principal')) echo 'active font-weight-bold'; ?>" href="<?=site_url('principal')?>">Principal</a>
               </li>-->
               <li class="nav-item">
-                <div class="my-2 my-sm-0 m-5">
+                <div class="my-2 my-sm-0 m-4 border border-danger rounded">
                   <a class="nav-link <?php if (!strcmp($title,'Cardapio')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cardapio')?>"><strong>Cardápio</strong></a>
                 </div>
               </li>
@@ -68,7 +68,7 @@
                 <a class="nav-link <?php if (!strcmp($title,'Pedido')) echo 'active font-weight-bold'; ?>" href="<?=site_url('pedido')?>">Realizar Pedidos</a>
               </li>-->
               <li class="nav-item">
-                <div class="my-2 my-sm-0 m-5">
+                <div class="my-2 my-sm-0 m-4 border border-danger rounded">
                   <a class="nav-link <?php if (!strcmp($title,'Sugestao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('sugestao')?>"><strong>Sugestões</strong></a>
                 <div>
               </li>
@@ -76,9 +76,9 @@
                 <a class="nav-link <?php if (!strcmp($title,'Cadastro')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cadastro')?>">Cadastro</a>
               </li>-->
               <li class="nav-item">
-                <div class="my-2 my-sm-0 m-5">
+                <div class="my-2 my-sm-0 m-4 border border-danger rounded">
                   <a class="nav-link <?php if (!strcmp($title,'Cliente')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cliente')?>"><strong>Cliente</strong></a>
-                <div>  
+                <div>
               </li>
             </ul>
           </div>
