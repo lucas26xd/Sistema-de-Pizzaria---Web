@@ -35,7 +35,7 @@
   		</div>
   		<div class="form-group" align="center">
   			<input type="submit" value="Entrar" class="btn btn-success"/>
-        <input type="submit" value="Cadastrar-se" class="btn btn-info"/>
+        <input type="submit" value="Cadastrar" class="btn btn-info"/>
   		</div>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
   	</form>

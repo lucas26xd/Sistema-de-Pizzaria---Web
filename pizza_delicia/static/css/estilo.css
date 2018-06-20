@@ -160,7 +160,7 @@ footer {
 
 .tabela tr:hover {
   background-color: #FFECB3;
-  
+
 }
 
 .tabela th {
@@ -186,6 +186,7 @@ label {
 
  input[type=email], input[type=password], select {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 20px;
   width: 100%;
   padding:22px;
   margin: 8px 0;
