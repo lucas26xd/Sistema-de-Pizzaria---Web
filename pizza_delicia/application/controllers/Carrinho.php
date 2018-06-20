@@ -87,9 +87,9 @@ class Carrinho extends CI_Controller {
         $this->pedido_model->insere_pedido($idLogado);
         $pedidoID = $this->pedido_model->get_lastpedido_cliente($idLogado);
       }
-      $valorP = $this->pedido_model->get_produto($prodID, 'valorPequena');
+      $valorP = $this->produto_model->get_produto($prodID, 'valorPequena');
       $this->pedido_model->insere_item_pedido($pedidoID, $prodID, $valorP);
     }
+    redirect('carrinho');
   }
-  redirect('carrinho');
 }
