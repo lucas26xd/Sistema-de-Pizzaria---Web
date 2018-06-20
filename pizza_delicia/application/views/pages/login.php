@@ -41,22 +41,27 @@
   	</form>
   <?php } else { ?>
     <?php if($this->session->userdata('id') == '0'){ ?>
-      <p>Usuário/Senha incorreto</p>
+      <p class="paragrafo">*Usuário/Senha incorreto</p>
       <form action="<?=base_url('logar')?>" method="POST" class="form-signin">
         <div class="text-center mb-4">
-          <img class="mb-4" src="<?=base_url('static/imagens/logo.png');?>" alt="Pizza Delícia" height="72">
-          <h1 class="h3 mb-3 font-weight-normal"><?=$title?> - Pizza Delícia</h1>
+          <!--<img class="mb-4" src="<?=base_url('static/imagens/logo.png');?>" alt="Pizza Delícia" height="72">-->
+          <h1 class="h3 mb-3 font-weight-normal f" align="left">LOGIN:</h1>
         </div>
         <div class="form-label-group">
-    			<label>E-mail: </label><br>
-    			<input type="email" name="nome" class="form-control" required/>
+    			<label>E-mail: </label><br><br>
+          <div class="col-sm-10">
+            <input type="email" name="nome" class="form-control" required/>
+          </div>
     		</div>
         <div class="form-label-group">
-    			<label>Senha: </label><br>
-    			<input type="password" name="senha" class="form-control" required/>
+    			<label>Senha: </label><br><br>
+          <div class="col-sm-10">
+    			  <input type="password" name="senha" class="form-control" required/>
+          </div>
     		</div>
-    		<div class="form-group">
-    			<input type="submit" value="Registrar" class="btn btn-success" />
+    		<div class="form-group" align="center">
+    			<input type="submit" value="Entrar" class="btn btn-success"/>
+          <input type="submit" value="Cadastrar" class="btn btn-info"/>
     		</div>
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
     	</form>
