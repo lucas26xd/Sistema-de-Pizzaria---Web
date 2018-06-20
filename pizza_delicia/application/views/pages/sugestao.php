@@ -24,7 +24,7 @@
 
 	<br><br>
 
-	<?php if(!$this->session->has_userdata('id')){ ?>
+	<?php if(!$this->session->has_userdata('id') || $this->session->userdata('id') == 0){ ?>
 		<div class="alert alert-danger alert-dismissible fade show" role="alert">
 			<h4 class="alert-heading">Erro!</h4>
 			<p>
