@@ -88,11 +88,17 @@ CREATE TABLE itensPedido (
 INSERT INTO itensPedido VALUES (1,3,2,1,0),(2,3,1,2,0);
 
 CREATE TABLE sugestao (
-  id int(11) NOT NULL,
+  id int(11) NOT NULL AUTO_INCREMENT,
   clienteID int(11) NOT NULL,
-  msg text NOT NULL,
+  msg text COLLATE utf8_bin NOT NULL,
   data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (id));
+  PRIMARY KEY (id),
+  KEY fk_sugestao_cliente_idx (clienteID),
+  CONSTRAINT fk_sugestao_cliente 
+  FOREIGN KEY (clienteID)
+  REFERENCES cliente (id)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION);
 
 CREATE TABLE usuario (
     id INT NOT NULL AUTO_INCREMENT,

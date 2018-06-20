@@ -22,9 +22,24 @@ class Pedido_model extends CI_Model {
       return $query->result_array()[0][$campo];
   }
 
+  public function get_lastpedido_cliente($clienteID) {//seleciona o pedido q tá no carrinho do cliente logado
+    $this->db->select_max('id');
+    $query = $this->db->get_where('pedido', array('clienteID' => $clienteID, 'status' => "No CARRINHO"));
+    if(count($query->result_array()) > 0)
+      return $query->result_array();
+    else
+      return 0;
+  }
+
   public function insere_pedido($clienteID) {//apenas cria o pedido com valor zerado atrelando ao cliente
     $dados = array('clienteID' => $clienteID);
-    $query = $this->db->insert("pedido", $dados);
+    $query = $this->db->insert('pedido', $dados);
+    return $query->result_array();
+  }
+
+  public function insere_item_pedido($pedidoID, $prodID, $valorP) {//apenas cria o pedido com valor zerado atrelando ao cliente
+    $dados = array('pedidoID' => $pedidoID, 'prodID' => $prodID, 'qtd' => 1, 'valor' => $valorP);
+    $query = $this->db->insert('itensPedido', $dados);
     return $query->result_array();
   }
 

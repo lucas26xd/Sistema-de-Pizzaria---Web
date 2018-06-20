@@ -72,4 +72,22 @@ class Carrinho extends CI_Controller {
     $valorProduto = $valorProduto + ($qtd * $valor);
     $this->pedido_model->atualiza_valor_pedido($pedidoID, $valorProduto);
   }
+
+  public function cadastra_pedido($prodID, $valorP){
+    $this->load->model('pedido_model');
+
+    if($this->session->has_userdata('id'))
+      $idLogado = $this->session->userdata('id');
+    else
+      $idLogado = 0;
+    if($idLogado != 0){
+      $pedidoID = $this->pedido_model->get_lastpedido_cliente($idLogado);
+      if($pedidoID == 0){
+        $this->pedido_model->insere_pedido($idLogado);
+        $pedidoID = $this->pedido_model->get_lastpedido_cliente($idLogado);
+      }
+      $this->pedido_model->insere_item_pedido($pedidoID, $prodID, $valorP);
+    }
+  }
+  redirect('carrinho');
 }
