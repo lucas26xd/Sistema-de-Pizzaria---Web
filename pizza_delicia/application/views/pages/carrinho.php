@@ -2,12 +2,14 @@
 		<form id="carrinho" method="post" action="" style="display: none" onsubmit="return verificaCompra(this);">
 			<div class="table-responsive-sm">
 				<table class="table table-sm">
-					<tr class="table-success" >
-						<th scope="col">Produto</th>
-						<th scope="col">Tamanho</th>
-						<th scope="col">Quantidade</th>
-						<th scope="col">Valor</th>
-					</tr>
+					<thead class="thead-dark">
+						<tr>
+							<th width="30%">Produto</th>
+							<th width="1%">Tamanho</th>
+							<th width="1%">Quantidade</th>
+							<th width="6%">Valor</th>
+						</tr>
+					</thead>
 					<?php foreach ($pedidos as $pedido) { ?>
 						<tr id=<?=$pedido['id']?>>
 							<td><?=$pedido['nome']?></td>
@@ -23,7 +25,8 @@
 										<?php for ($i=1; $i < 6; $i++) { ?>
 											<option value=<?="qtd".$i?> <?=($i == 1) ? 'selected' : ''?>><?=$i?></option>
 										<?php } ?>
-									</select></td>
+									</select>
+							</td>
 							<td><input type="text" name=<?="valor".$pedido['id']?> disabled></td>
 						</tr>
 					<?php } ?>
