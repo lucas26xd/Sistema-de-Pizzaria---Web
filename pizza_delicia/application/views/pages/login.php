@@ -9,7 +9,7 @@
       </style>
 
 
-<div class="container">
+<div class="container" align="center">
 
 	<?php if ($this->session->flashdata('sessao-encerrada') == TRUE): ?>
 		<div class="alert alert-info"><?= $this->session->flashdata('sessao-encerrada'); ?></div>
@@ -19,16 +19,16 @@
   	<form action="<?=base_url('logar')?>" method="POST" class="form-signin">
       <div class="text-center mb-4">
         <!--<img class="mb-4" src="<?=base_url('static/imagens/logo.png');?>" alt="Pizza Delícia" height="72">-->
-        <h1 class="h3 mb-3 font-weight-normal f" align="left">LOGIN:</h1>
+        <h1 class="h3 mb-3 font-weight-normal f" align="center">LOGIN:</h1>
       </div>
       <div class="form-label-group">
-  			<label>E-mail: </label><br><br>
+  			<label align="left">E-mail: </label><br><br>
         <div class="col-sm-10">
           <input type="email" name="nome" class="form-control" required/>
         </div>
   		</div>
       <div class="form-label-group">
-  			<label>Senha: </label><br><br>
+  			<label align="left">Senha: </label><br><br>
         <div class="col-sm-10">
   			  <input type="password" name="senha" class="form-control" required/>
         </div>
