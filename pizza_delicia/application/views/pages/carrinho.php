@@ -2,7 +2,6 @@
 		<form id="carrinho" method="post" action="" style="display: none" onsubmit="return verificaCompra(this);">
 			<div class="table-responsive-sm">
 				<table class="table table-sm">
-					<caption>*Seus Pedidos*</caption>
 					<tr class="table-success" >
 						<th scope="col">Produto</th>
 						<th scope="col">Tamanho</th>
@@ -22,7 +21,7 @@
 										<option value="qtd0">0</option>
 										<option value="qtdmeia">1/2</option>
 										<?php for ($i=1; $i < 6; $i++) { ?>
-											<option value=<?="qtd".$i?>><?=$i?></option>
+											<option value=<?="qtd".$i?> <?=($i == 1) ? 'selected' : ''?>><?=$i?></option>
 										<?php } ?>
 									</select></td>
 							<td><input type="text" name=<?="valor".$pedido['nome']?> disabled></td>

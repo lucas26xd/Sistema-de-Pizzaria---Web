@@ -29,9 +29,25 @@ class Carrinho extends CI_Controller {
     }
     */
     $this->load->model('cliente_model');
+    $this->load->model('pedido_model');
+    $this->load->model('produto_model');
+
     $data['enderecos'] = $this->cliente_model->get_enderecos(28); //pega enderecos ligados ao cliente passado
-    $data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')), array('nome' => 'Pizza de Fangro', 'tamanho' => array('P', 'M', 'G', 'F')));
+    $data['pedidos'] = $this->pedido_model->get_itens_pedidos(28);
+    //$data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')), array('nome' => 'Pizza de Fangro', 'tamanho' => array('P', 'M', 'G', 'F')));
     //$data['enderecos'] = array(array('rua' => 'Rua 08 de janeiro', 'numero' => "106", 'bairro' => 'Brasília', 'cidade' => 'Cruz'));
+
+    for($i = 0; $i < count($data['pedidos']); $i++) {//add o indice de nome no pedido para colocar direto na tabela de viewe no carrinho
+      $data['pedidos'][$i]['nome'] = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'nome');
+    }
+
+    for($i = 0; $i < count($data['pedidos']); $i++) {//add o indice de nome no pedido para colocar direto na tabela de viewe no carrinho
+      $cat = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'categoria');
+      if($cat == 'P')
+        $data['pedidos'][$i]['tamanho'] = array('P', 'M', 'G', 'F');
+      else
+        $data['pedidos'][$i]['tamanho'] = array('P', 'M');
+    }
 
     $data['title'] = ucfirst($page);
     $this->load->view('templates/header', $data);

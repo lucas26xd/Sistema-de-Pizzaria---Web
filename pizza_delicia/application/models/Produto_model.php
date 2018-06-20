@@ -17,6 +17,15 @@ class Produto_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function get_produto($id, $campo = '*') {//seleciona campo do produto q desejar
+    $this->db->select($campo);
+    $query = $this->db->get_where('produto', array('id' => $id));
+    if($campo == '*')
+      return $query->result_array();
+    else
+      return $query->result_array()[0][$campo];
+  }
+
   public function insere_produto($nome, $valorP, $valorM, $valorG, $valorF, $categoria) {
     $dados = array('nome' => $nome, 'valorPequena' => $valorP, 'valorMedia' => $valorM, 'valorGrande' => $valorG, 'valorFamilia' => $valorF, 'categoria' => $categoria);
     $query = $this->db->insert("produto", $dados);

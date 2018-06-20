@@ -5,8 +5,9 @@ class Pedido_model extends CI_Model {
 
   public function get_itens_pedidos($clienteID) {//retorna todos os pedidos que estão no carrinho atrelados aquele cliente
     $this->db->select('id');
-    $query = $this->db->get('pedido');
-    $query = $this->db->get_where('itensPedido', array('pedidoID' => $query['id'], 'status' => 'No CARRINHO'));
+    $query = $this->db->get_where('pedido', array('status' => "No CARRINHO"));
+    $query = $query->result_array()[0];
+    $query = $this->db->get_where('itensPedido', array('pedidoID' => $query['id']));
     return $query->result_array();
   }
 
@@ -38,7 +39,7 @@ class Pedido_model extends CI_Model {
   }
 
   public function apaga_item_pedido($id){
-    $this->db->delete('itensPedido', array('id' => $id)); 
+    $this->db->delete('itensPedido', array('id' => $id));
   }
 
 }

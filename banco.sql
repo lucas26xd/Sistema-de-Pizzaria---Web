@@ -39,9 +39,9 @@ INSERT INTO endereco VALUES (4,27,'Rua 8 de janeiro, 106','106','brasilia','CRUZ
 CREATE TABLE pedido (
   id int(11) NOT NULL AUTO_INCREMENT,
   clienteID int(11) NOT NULL,
-  valor float NOT NULL,
+  valor float NOT NULL DEFAULT '0',
   data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  status enum('ENTREGUE','CANCELADO','Em ANDAMENTO') NOT NULL,
+  status enum('ENTREGUE','CANCELADO','Em ANDAMENTO','No CARRINHO') CHARACTER SET utf8 NOT NULL DEFAULT 'No CARRINHO',
   PRIMARY KEY (id),
   KEY fk_pedido_cliente_idx (clienteID),
   CONSTRAINT fk_pedido_cliente
@@ -49,6 +49,8 @@ CREATE TABLE pedido (
   REFERENCES cliente (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION);
+
+INSERT INTO pedido VALUES (1,27,0,'2018-06-19 22:08:47','ENTREGUE'),(2,27,0,'2018-06-19 22:10:41','Em ANDAMENTO'),(3,28,0,'2018-06-19 22:10:44','No CARRINHO');
 
 CREATE TABLE produto (
   id int(11) NOT NULL AUTO_INCREMENT,
@@ -67,8 +69,8 @@ CREATE TABLE itensPedido (
   id int(11) NOT NULL AUTO_INCREMENT,
   pedidoID int(11) NOT NULL,
   prodID int(11) NOT NULL,
-  qtd float NOT NULL,
-  valor float NOT NULL,
+  qtd float NOT NULL DEFAULT '0',
+  valor float NOT NULL DEFAULT '0',
   PRIMARY KEY (id),
   KEY fk_itensPedido_pedido_idx (pedidoID),
   KEY fk_itensPedido_prod_idx (prodID),
@@ -77,11 +79,13 @@ CREATE TABLE itensPedido (
   REFERENCES pedido (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
-  CONSTRAINT fk_itensPedido_prod
+  CONSTRAINT fk_itensPedido_prod 
   FOREIGN KEY (prodID)
   REFERENCES produto (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION);
+
+INSERT INTO itensPedido VALUES (1,3,2,1,0),(2,3,1,2,0);
 
 CREATE TABLE sugestao (
   id int(11) NOT NULL,
