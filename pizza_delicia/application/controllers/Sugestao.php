@@ -10,7 +10,7 @@ class Sugestao extends CI_Controller {
   public function index($page = 'sugestao'){
 
     $data['title'] = ucfirst($page);
-    $data['deubom'] = 0;
+    //$data['deubom'] = 0;
     $this->load->view('templates/header', $data);
     $this->load->view('pages/'.$page, $data);
     $this->load->view('templates/footer');
@@ -23,11 +23,11 @@ class Sugestao extends CI_Controller {
 
     $this->sugestao_model->insere_sugestao($id, $msg);
 
-
-    $data['title'] = ucfirst($page);
-    $data['deubom'] = 1;
-    $this->load->view('templates/header', $data);
-    $this->load->view('pages/'.$page, $data);
-    $this->load->view('templates/footer');
+    redirect('Principal');
+    //$data['title'] = ucfirst($page);
+    //$data['deubom'] = 1;
+    //$this->load->view('templates/header', $data);
+    //$this->load->view('pages/'.$page, $data);
+    //$this->load->view('templates/footer');
   }
 }
