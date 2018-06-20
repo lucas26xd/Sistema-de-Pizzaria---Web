@@ -34,8 +34,8 @@
         </div>
   		</div>
   		<div class="form-group" align="center">
-  			<input type="submit" value="Entrar" class="btn btn-success"/>
-        <input type="submit" value="Cadastrar" class="btn btn-info"/>
+        <input type="submit" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
+        <input type="submit" value="Entrar" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
   		</div>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
   	</form>
@@ -60,8 +60,8 @@
           </div>
     		</div>
     		<div class="form-group" align="center">
-    			<input type="submit" value="Entrar" class="btn btn-success"/>
-          <input type="submit" value="Cadastrar" class="btn btn-info"/>
+    			<input type="submit" value="Entrar" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
+          <input type="submit" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
     		</div>
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
     	</form>
