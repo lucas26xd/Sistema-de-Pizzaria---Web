@@ -50,9 +50,9 @@
 				<input type="text" class="form-control" id="total" name="total" disabled required>
 			</div>
 
-			<div class="row justify-content-center">
-			  <input type="submit" class="col" name="env" value="Cadastrar">
-			  <input type="reset" class="col" name="limpar" value="Limpar">
+			<div class="form-group" align="center">
+			  <input type="submit" class="btn btn-success" name="env" value="Cadastrar">
+			  <input type="reset" class="btn btn-danger" name="limpar" value="Limpar">
       </div>
 		</form>
 	<?php } else if($this->session->has_userdata('usuario') && $this->session->userdata('id') != '0') { ?>
