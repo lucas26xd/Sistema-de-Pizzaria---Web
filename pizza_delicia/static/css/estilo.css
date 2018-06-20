@@ -184,7 +184,7 @@ label {
   font-size: 20px;
 }
 
- input[type=email], input[type=password] {
+ /*input[type=email], input[type=password] {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 20px;
   width: 100%;
@@ -194,7 +194,7 @@ label {
   border: 1px solid #000;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: transparent;*/
 }
 
 textarea {
