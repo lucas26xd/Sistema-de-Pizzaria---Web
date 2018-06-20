@@ -17,11 +17,11 @@ class Login extends CI_Controller {
 	{
 		$this->session->set_userdata('usuario',$this->input->post('nome'));
     $this->session->set_userdata('senha',$this->input->post('senha'));
-		redirect();
+		redirect('Login');
 	}
   public function EncerrarSessoes()
 	{
 		$this->session->sess_destroy();
-		redirect();
+		redirect('Login');
 	}
 }
