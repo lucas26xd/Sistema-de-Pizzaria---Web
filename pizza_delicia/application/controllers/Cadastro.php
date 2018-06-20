@@ -27,7 +27,7 @@ class Cadastro extends CI_Controller {
       $this->load->model('cliente_model');
       $this->cliente_model->insere_cliente($nome, $tel, $email, $senha, $endereco);//insere cliente e seus endereços respectivos
     }
-
+    
     $data['title'] = ucfirst($page);
     $this->load->view('templates/header', $data);
     $this->load->view('pages/'.$page, $data);

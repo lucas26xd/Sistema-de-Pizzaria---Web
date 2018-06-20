@@ -85,10 +85,15 @@
           <a class="btn btn-outline-dark my-2 my-sm-0 m-3" href="<?=site_url('carrinho')?>" role="button">
             <img class="d-inline-block align-top" src="<?=base_url('static/imagens/carrinho.png')?>" height="20" alt="Carrinho">
             Carrinho</a>
+            <?php if(!$this->session->has_userdata('id') || $this->session->userdata('id') == 0){ ?>
           <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
             <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
             Login</a>
-
+        <?php } else { ?>
+        <a class="btn btn-outline-primary my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
+          <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
+          Logado</a>
+        <?php } ?>
         </div>
 
 
