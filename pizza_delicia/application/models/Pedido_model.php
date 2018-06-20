@@ -5,7 +5,7 @@ class Pedido_model extends CI_Model {
 
   public function get_itens_pedidos($clienteID) {//retorna todos os pedidos que estão no carrinho atrelados aquele cliente
     $this->db->select('id');
-    $query = $this->db->get_where('pedido', array('id' => $clienteID, 'status' => "No CARRINHO"));
+    $query = $this->db->get_where('pedido', array('clienteID' => $clienteID, 'status' => "No CARRINHO"));
     if(count($query->result_array()) > 0){
       $query = $query->result_array()[0];
       $query = $this->db->get_where('itensPedido', array('pedidoID' => $query['id']));
