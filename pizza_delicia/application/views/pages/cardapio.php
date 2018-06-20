@@ -12,7 +12,7 @@
 					</tr>
 					<?php foreach ($produtos['P'] as $produto) { ?>
 						<tr>
-							<td><?=$produto['nome']?></td>
+							<td><a href=<?=site_url('carrinho/cadastro_pedido/'.$produto['id'])?>> <?=$produto['nome']?> </a></td>
 							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
 							<td><?='R$ ' . number_format($produto['valorMedia'], 2, ',', '.')?></td>
 							<td><?='R$ ' . number_format($produto['valorGrande'], 2, ',', '.')?></td>
