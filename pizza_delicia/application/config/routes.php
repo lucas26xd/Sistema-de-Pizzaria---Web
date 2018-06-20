@@ -54,5 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['logar'] = "Login/Logar";
 $route['encerrar-sessao'] = "Principal/EncerrarSessao";
-$route['encerrar-sessoes'] = "Principal/EncerrarSessoes";
+$route['encerrar-sessoes'] = "Login/EncerrarSessoes";
 $route['sessao-temporizada'] = "Principal/SessaoTemporizada";
