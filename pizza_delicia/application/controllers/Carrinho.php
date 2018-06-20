@@ -12,8 +12,13 @@ class Carrinho extends CI_Controller {
     $this->load->model('pedido_model');
     $this->load->model('produto_model');
 
-    $data['enderecos'] = $this->cliente_model->get_enderecos(28); //pega enderecos ligados ao cliente passado
-    $data['pedidos'] = $this->pedido_model->get_itens_pedidos(28);
+    if($this->session->has_userdata('id'))
+      $idLogado = $this->session->userdata('id');
+    else
+      $idLogado = 0;
+
+    $data['enderecos'] = $this->cliente_model->get_enderecos($idLogado); //pega enderecos ligados ao cliente passado
+    $data['pedidos'] = $this->pedido_model->get_itens_pedidos($idLogado);
     //$data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')), array('nome' => 'Pizza de Fangro', 'tamanho' => array('P', 'M', 'G', 'F')));
     //$data['enderecos'] = array(array('rua' => 'Rua 08 de janeiro', 'numero' => "106", 'bairro' => 'Brasília', 'cidade' => 'Cruz'));
 
@@ -50,6 +55,7 @@ class Carrinho extends CI_Controller {
     $qtd = $this->input->post('qtd');
 
     $prodID = $this->pedido_model->get_item_pedido($id, 'prodID');
+    $pedidoID = $this->pedido_model->get_item_pedido($id, 'pedidoID');
 
     $campo = 'valorPequena';
     if($tam == 'M')
@@ -61,5 +67,9 @@ class Carrinho extends CI_Controller {
 
     $valor = $this->produto_model->get_produto($prodID, $campo);
     $this->pedido_model->atualiza_item_pedido($id, $qtd, $valor);
+
+    $valorProduto = $this->pedido_model->get_pedido($pedidoID, 'valor');
+    $valorProduto = $valorProduto + ($qtd * $valor);
+    $this->pedido_model->atualiza_valor_pedido($pedidoID, $valorProduto);
   }
 }

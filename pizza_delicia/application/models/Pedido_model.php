@@ -5,10 +5,21 @@ class Pedido_model extends CI_Model {
 
   public function get_itens_pedidos($clienteID) {//retorna todos os pedidos que estão no carrinho atrelados aquele cliente
     $this->db->select('id');
-    $query = $this->db->get_where('pedido', array('status' => "No CARRINHO"));
-    $query = $query->result_array()[0];
-    $query = $this->db->get_where('itensPedido', array('pedidoID' => $query['id']));
+    $query = $this->db->get_where('pedido', array('id' => $clienteID, 'status' => "No CARRINHO"));
+    if(count($query->result_array()) > 0){
+      $query = $query->result_array()[0];
+      $query = $this->db->get_where('itensPedido', array('pedidoID' => $query['id']));
+    }
     return $query->result_array();
+  }
+
+  public function get_pedido($id, $campo = '*') {//seleciona campo do produto q desejar
+    $this->db->select($campo);
+    $query = $this->db->get_where('pedido', array('id' => $id));
+    if($campo == '*')
+      return $query->result_array();
+    else
+      return $query->result_array()[0][$campo];
   }
 
   public function insere_pedido($clienteID) {//apenas cria o pedido com valor zerado atrelando ao cliente
