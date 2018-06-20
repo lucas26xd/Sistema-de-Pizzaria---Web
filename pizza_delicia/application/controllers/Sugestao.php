@@ -8,10 +8,20 @@ class Sugestao extends CI_Controller {
    *
    */
   public function index($page = 'sugestao'){
-  
+
     $data['title'] = ucfirst($page);
     $this->load->view('templates/header', $data);
     $this->load->view('pages/'.$page, $data);
     $this->load->view('templates/footer');
+  }
+  public function inserir_sugestao(){
+    $msg = $this->input->post('msg');
+    $id = $this->session->userdata('id');
+
+    $this->load->model('sugestao_model');
+
+    $this->sugestao_model->insere_sugestao($id, $msg);
+    
+    redirect('Principal');
   }
 }
