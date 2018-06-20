@@ -35,7 +35,7 @@
 					</tr>
 					<?php foreach ($produtos['D'] as $produto) { ?>
 						<tr>
-							<td><?=$produto['nome']?></td>
+							<td><a href=<?=site_url('carrinho/cadastra_pedido/'.$produto['id'])?>> <?=$produto['nome']?> </a></td>
 							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
 							<td><?='R$ ' . number_format($produto['valorMedia'], 2, ',', '.')?></td>
 						</tr>
@@ -56,7 +56,7 @@
 					</tr>
 					<?php foreach ($produtos['D'] as $produto) { ?>
 						<tr>
-							<td><?=$produto['nome']?></td>
+							<td><a href=<?=site_url('carrinho/cadastra_pedido/'.$produto['id'])?>> <?=$produto['nome']?> </a></td>
 							<td><?='R$ ' . number_format($produto['valorPequena'], 2, ',', '.')?></td>
 							<td><?='R$ ' . number_format($produto['valorMedia'], 2, ',', '.')?></td>
 						</tr>
