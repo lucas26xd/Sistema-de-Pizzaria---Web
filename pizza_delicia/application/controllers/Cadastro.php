@@ -9,16 +9,16 @@ class Cadastro extends CI_Controller {
    */
   public function index($page = 'cadastro') {
     @ $nome = ucfirst($_POST["nome"]);
-    @ $tel = $_POST["tel"];
-    @ $email = $_POST["email"];
-    @ $senha = $_POST["senha"];
-    @ $qtdEnd = $_POST["qtdEnd"];
+    @ $tel = $this->input->post('tel');
+    @ $email = $this->input->post('email');
+    @ $senha = $this->input->post('senha');
+    @ $qtdEnd = $this->input->post('qtdEnd');
     $endereco = array();
     for ($i=1; $i <= $qtdEnd; $i++) {
-        @ $rua = ucfirst($_POST["rua".$i]);
-        @ $num = ucfirst($_POST["num".$i]);
-        @ $bairro = ucfirst($_POST["bairro".$i]);
-        @ $cidade = ucfirst($_POST["cidade".$i]);
+        @ $rua = ucfirst($this->input->post('rua'.$i));
+        @ $num = ucfirst($this->input->post('num'.$i));
+        @ $bairro = ucfirst($this->input->post('bairro'.$i));
+        @ $cidade = ucfirst($this->input->post('cidade'.$i));
         $endereco[$i-1] = array('rua' => $rua, 'num' => $num, 'bairro' => $bairro, 'cidade' => $cidade);
     }
 

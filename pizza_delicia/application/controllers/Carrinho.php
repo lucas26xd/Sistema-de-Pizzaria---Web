@@ -8,26 +8,6 @@ class Carrinho extends CI_Controller {
    *
    */
   public function index($page = 'carrinho') {
-    /*@ $nome = ucfirst($_POST["nome"]);
-    @ $tel = $_POST["tel"];
-    @ $email = $_POST["email"];
-    @ $senha = $_POST["senha"];
-    @ $qtdEnd = $_POST["qtdEnd"];
-    $endereco = array();
-    for ($i=1; $i <= $qtdEnd; $i++) {
-        @ $rua = ucfirst($_POST["rua".$i]);
-        @ $num = ucfirst($_POST["num".$i]);
-        @ $bairro = ucfirst($_POST["bairro".$i]);
-        @ $cidade = ucfirst($_POST["cidade".$i]);
-        $endereco[$i-1] = array('rua' => $rua, 'num' => $num, 'bairro' => $bairro, 'cidade' => $cidade);
-    }
-
-    $data['cadastrou'] = $nome != null && $tel != null && $email != null && $senha != null;
-    if ($data['cadastrou']) {
-      $this->load->model('cliente_model');
-      $this->cliente_model->insere_cliente($nome, $tel, $email, $senha, $endereco);//insere cliente e seus endereços respectivos
-    }
-    */
     $this->load->model('cliente_model');
     $this->load->model('pedido_model');
     $this->load->model('produto_model');
@@ -64,10 +44,13 @@ class Carrinho extends CI_Controller {
   public function calculaTotal(){
     $this->load->model('pedido_model');
     $this->load->model('produto_model');
-    $id = $_POST["id"];
-    $tam = $_POST["tam"];
-    $qtd = $_POST["qtd"];
+
+    $id = $this->input->post('id');
+    $tam = $this->input->post('tam');
+    $qtd = $this->input->post('qtd');
+
     $prodID = $this->pedido_model->get_item_pedido($id, 'prodID');
+
     $campo = 'valorPequena';
     if($tam == 'M')
       $campo = 'valorMedia';
@@ -75,6 +58,7 @@ class Carrinho extends CI_Controller {
       $campo = 'valorGrande';
     else if($tam == 'F')
       $campo = 'valorFamilia';
+
     $valor = $this->produto_model->get_produto($prodID, $campo);
     $this->pedido_model->atualiza_item_pedido($id, $qtd, $valor);
   }
