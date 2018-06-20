@@ -29,7 +29,7 @@ class Carrinho extends CI_Controller {
     }
     */
     $this->load->model('cliente_model');
-    $data['enderecos'] = $this->cliente_model->get_enderecos(28);
+    $data['enderecos'] = $this->cliente_model->get_enderecos(28); //pega enderecos ligados ao cliente passado
     $data['pedidos'] = array(array('nome' => 'Pizza de Calabresa', 'tamanho' => array('P', 'M', 'G', 'F')), array('nome' => 'Pizza de Fangro', 'tamanho' => array('P', 'M', 'G', 'F')));
     //$data['enderecos'] = array(array('rua' => 'Rua 08 de janeiro', 'numero' => "106", 'bairro' => 'Brasília', 'cidade' => 'Cruz'));
 
