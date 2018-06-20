@@ -56,7 +56,6 @@ $( document ).ready(function() {
 
   $('.qtdPedido').change(function(a){
     console.log(a);
-    a.originalEvent.path[2].children[3].children[0].value = "oi";
     var x = a.originalEvent.path[2].children[2].children[0].value;
     if(x == "qtd0"){
       var request = $.ajax({
@@ -73,6 +72,7 @@ $( document ).ready(function() {
           alert("Deu ruim! "+jqXHR+" <-> "+textStatus);
       });
     }else{
+      alert('Quantidade');
       var request = $.ajax({
         url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/calculaTotal/",
         method: "POST",
@@ -93,7 +93,7 @@ $( document ).ready(function() {
   });
 
 	//$("input:text:eq(0):visible").focus(); //coloca foco no primeiro campo do formulário
-
+/*
 	$("#enviarsugestao").click(function(btn){ //ação do botão de sugestões
 		btn.preventDefault();
 		$("html, body").animate({scrollTop:0}, "slow");
@@ -112,7 +112,7 @@ $( document ).ready(function() {
 			this.form[this.form.length - 3].value = "0";
 		}
 	});
-
+*/
 	//ação dos botões de inserir e remover campos de endereço
 	$("#addEnd").click(function(e) {
 		e.preventDefault();

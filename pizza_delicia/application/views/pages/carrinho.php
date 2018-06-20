@@ -55,7 +55,7 @@
 			  <input type="reset" class="col" name="limpar" value="Limpar">
       </div>
 		</form>
-	<?php } else if($this->session->has_userdata('usuario') == 1) { ?>
+	<?php } else if($this->session->has_userdata('usuario') && $this->session->userdata('id') != '0') { ?>
 		<h1>Carrinho Vazio!</h1>
 		<h3>Ir para <a class="link" href="<?=site_url('cardapio')?>">Cardápio</a></h3>
 	<?php } else { ?>

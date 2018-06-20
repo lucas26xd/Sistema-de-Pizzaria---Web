@@ -66,11 +66,13 @@ class Carrinho extends CI_Controller {
       $campo = 'valorFamilia';
 
     $valor = $this->produto_model->get_produto($prodID, $campo);
-    $this->pedido_model->atualiza_item_pedido($id, $qtd, $valor);
+    $this->pedido_model->atualiza_item_pedido($id, $qtd, $qtd * $valor);
 
     $valorProduto = $this->pedido_model->get_pedido($pedidoID, 'valor');
     $valorProduto = $valorProduto + ($qtd * $valor);
     $this->pedido_model->atualiza_valor_pedido($pedidoID, $valorProduto);
+
+    //redirect('carrinho');
   }
 
   public function cadastra_pedido($prodID){
