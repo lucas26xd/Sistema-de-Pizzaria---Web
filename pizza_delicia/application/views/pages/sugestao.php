@@ -1,5 +1,6 @@
+<?php if($deubom === 1) {?>
 <div class="container-fluid">
-	<div id="sucessosugestao" class="alert alert-info alert-dismissible fade show" role="alert" style="display: none;">
+	<div class="alert alert-info alert-dismissible fade show" role="alert">
 		<h4 class="alert-heading">Sucesso!</h4>
 		<p>
 			 Obrigado pela sugestão!<br>Sempre lemos suas sugestões e tentamos seguir na medida do possível,
@@ -11,7 +12,7 @@
 			<span aria-hidden="true">&times;</span>
 		</button>
 	</div>
-
+<?php } ?>
 
 	<br>
 
