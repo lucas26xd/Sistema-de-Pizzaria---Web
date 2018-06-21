@@ -18,6 +18,14 @@ options = {
   }
 };
 
+function moeda(v){
+  v=v.replace(/\D/g,"") // permite digitar apenas numero
+  v=v.replace(/(\d{1})(\d{1,2})$/,"$1,$2") // coloca virgula antes dos ultimos 4 digitos
+  return v;
+}
+
+
+
 $( document ).ready(function() {
 	$("form, #gif, #gif3, .tabela").show(1000); //animação dos elementos
 
@@ -31,63 +39,53 @@ $( document ).ready(function() {
 	});
 
   $('.tamPedido').change(function(a){
-      //alert('Mudou!');
-      /*console.log(a);
-      a.originalEvent.path[2].children[3].children[0].value = "oi";
-      alert(a.originalEvent.path[2].children[1].children[0].val);
-      console.log($('.tamPedido option:selected').text());*/
       var request = $.ajax({
         url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/calculaTotal/",
         method: "POST",
         data: { id: a.originalEvent.path[2].id,
                 tam: a.originalEvent.path[2].children[1].children[0].value.substring(3),
-                qtd: a.originalEvent.path[2].children[2].children[0].value.substring(3)}
-      });
-
-      request.done(function( msg ){
-          alert("Deu bom! "+msg);
-      });
-
-      request.fail(function( jqXHR, textStatus ) {
-          alert("Deu ruim! "+textStatus);
-          console.log(jqXHR);
+                qtd: (a.originalEvent.path[2].children[2].children[0].value.substring(3) == 'meia' ? 0.5 : a.originalEvent.path[2].children[2].children[0].value.substring(3))},
+        error: function() {
+          alert('Erro ao tentar ação!');
+        },
+        success: function(retorno) {
+          //a.originalEvent.path[2].children[3].childNodes[0].data = "R$ "+moeda(retorno);
+          location.reload();
+        }
       });
   });
 
   $('.qtdPedido').change(function(a){
-    console.log(a);
     var x = a.originalEvent.path[2].children[2].children[0].value;
     if(x == "qtd0"){
       var request = $.ajax({
         url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/apagaPedido/",
         method: "POST",
-        data: { id: a.originalEvent.path[2].id}
-      });
-
-      request.done(function( msg ){
-          alert("Deu bom! "+msg);
-      });
-
-      request.fail(function( jqXHR, textStatus ) {
-          alert("Deu ruim! "+jqXHR+" <-> "+textStatus);
+        data: { id: a.originalEvent.path[2].id},
+        error: function() {
+          alert('Erro ao tentar ação!');
+        },
+        success: function(retorno) {
+          location.reload();
+          /*
+          console.log(a);
+          a.originalEvent.path[4].deleteRow(1);*/
+        }
       });
     }else{
-      alert('Quantidade');
       var request = $.ajax({
         url: "http://localhost/Projeto-Final-TecWeb/pizza_delicia/carrinho/calculaTotal/",
         method: "POST",
         data: { id: a.originalEvent.path[2].id,
                 tam: a.originalEvent.path[2].children[1].children[0].value.substring(3),
-                qtd: x.substring(3)}
-      });
-
-      request.done(function( msg ){
-          alert("Deu bom! "+msg);
-      });
-
-      request.fail(function( jqXHR, textStatus ) {
-        alert("Deu ruim! "+textStatus);
-        console.log(jqXHR);
+                qtd: (x.substring(3) == 'meia' ? 0.5 : x.substring(3))},
+        error: function() {
+          alert('Erro ao tentar ação!');
+        },
+        success: function(retorno) {
+          //a.originalEvent.path[2].children[3].childNodes[0].data = "R$ "+moeda(retorno+"0");
+          location.reload();
+        }
       });
     }
   });

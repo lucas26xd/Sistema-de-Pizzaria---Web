@@ -26,6 +26,23 @@ class Carrinho extends CI_Controller {
       $data['pedidos'][$i]['nome'] = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'nome');
     }
 
+    for($i = 0; $i < count($data['pedidos']); $i++) {
+      $valorP = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'valorPequena');
+      $valorM = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'valorMedia');
+      $valorG = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'valorGrande');
+      $valorF = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'valorFamilia');
+
+      $val = $data['pedidos'][$i]['valor']/$data['pedidos'][$i]['qtd'];
+      if($val == $valorP)
+        $data['pedidos'][$i]['TAM'] = "tamP";
+      else if($val == $valorM)
+        $data['pedidos'][$i]['TAM'] = "tamM";
+      else if($val == $valorG)
+        $data['pedidos'][$i]['TAM'] = "tamG";
+      else if($val == $valorF)
+        $data['pedidos'][$i]['TAM'] = "tamF";
+    }
+
     for($i = 0; $i < count($data['pedidos']); $i++) {//add o indice de nome no pedido para colocar direto na tabela de viewe no carrinho
       $cat = $this->produto_model->get_produto($data['pedidos'][$i]['prodID'], 'categoria');
       if($cat == 'P')
@@ -67,12 +84,13 @@ class Carrinho extends CI_Controller {
 
     $valor = $this->produto_model->get_produto($prodID, $campo);
     $this->pedido_model->atualiza_item_pedido($id, $qtd, $qtd * $valor);
-
+/*
     $valorProduto = $this->pedido_model->get_pedido($pedidoID, 'valor');
     $valorProduto = $valorProduto + ($qtd * $valor);
     $this->pedido_model->atualiza_valor_pedido($pedidoID, $valorProduto);
+*/
 
-    //redirect('carrinho');
+    echo $qtd * $valor;
   }
 
   public function cadastra_pedido($prodID){

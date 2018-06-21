@@ -15,15 +15,15 @@
 							<td><?=$pedido['nome']?></td>
 							<td><select class="tamPedido">
 										<?php foreach ($pedido['tamanho'] as $t) { ?>
-											<option value=<?="tam".$t?>><?=$t?></option>
+											<option value=<?="tam".$t?> <?=$pedido['TAM'] == "tam".$t ? 'selected' : ''?>><?=$t?></option>
 										<?php } ?>
 									</select>
 							</td>
 							<td><select class="qtdPedido">
 										<option value="qtd0">0</option>
-										<option value="qtdmeia">1/2</option>
+										<option value="qtdmeia" <?=$pedido['qtd'] == '0.5' ? 'selected' : ''?>>1/2</option>
 										<?php for ($i=1; $i < 6; $i++) { ?>
-											<option value=<?="qtd".$i?> <?=($i == 1) ? 'selected' : ''?>><?=$i?></option>
+											<option value=<?="qtd".$i?> <?=$pedido['qtd'] == $i ? 'selected' : ''?>><?=$i?></option>
 										<?php } ?>
 									</select>
 							</td>
@@ -51,8 +51,8 @@
 			</div>
 
 			<div class="form-group" align="center">
-			  <input type="submit" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5 " name="env" value="Cadastrar">
-			  <input type="reset" class="btn btn-danger my-2 my-sm-5 m-2 py-2 py-sm-2 p-5" name="limpar" value="Limpar">
+			  <input type="submit" class="btn btn-success" name="env" value="Cadastrar">
+			  <input type="reset" class="btn btn-danger" name="limpar" value="Limpar">
       </div>
 		</form>
 	<?php } else if($this->session->has_userdata('usuario') && $this->session->userdata('id') != '0') { ?>
