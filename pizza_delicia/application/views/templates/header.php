@@ -75,11 +75,11 @@
               <!--<li class="nav-item">
                 <a class="nav-link <?php if (!strcmp($title,'Cadastro')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cadastro')?>">Cadastro</a>
               </li>-->
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <div class="my-2 my-sm-0 m-4 border border-danger rounded">
                   <a class="nav-link <?php if (!strcmp($title,'Cliente')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cliente')?>"><strong>Cliente</strong></a>
                 <div>
-              </li>
+              </li>-->
             </ul>
           </div>
           <a class="btn btn-outline-dark my-2 my-sm-0 m-3" href="<?=site_url('carrinho')?>" role="button">
