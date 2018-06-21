@@ -51,7 +51,7 @@
 			</div>
 
 			<div class="form-group" align="center">
-			  <input type="submit" class="btn btn-success" name="env" value="Finalizar Compra">
+			  <input type="submit" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"" name="env" value="Finalizar Compra">
       </div>
 		</form>
 	<?php } else if($this->session->has_userdata('usuario') && $this->session->userdata('id') != '0') { ?>
