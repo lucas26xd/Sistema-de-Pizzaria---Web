@@ -37,7 +37,7 @@
 			</button>
 		</div>
 	<?php } else { ?>
-		<form action=<?=site_url('sugestao/inserir_sugestao')?> method="post" style="display: none">
+		<form action="<?=site_url('sugestao/inserir_sugestao')?>" method="post" style="display: none">
 			<label for="msg">Sua Sugestão:</label>
 			<div class="row">
 				<div class="col-12 col-md-8">
