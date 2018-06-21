@@ -35,7 +35,7 @@
   		</div>
   		<div class="form-group" align="center">
         <input type="submit" value="Entrar" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
-        <input type="button" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 mt-0 py-2 py-sm-2 p-5"/>
+        <input type="button" value="Cadastrar" onclick="redirecionarCadastro();" class="btn btn-info my-2 my-sm-5 m-2 mt-0 py-2 py-sm-2 p-5"/>
       </div>
   	</form>
   <?php } else { ?>
@@ -60,7 +60,7 @@
     		</div>
     		<div class="form-group" align="center">
           <input type="submit" value="Entrar" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
-          <input type="button" value="Cadastrar" onclick="" class="btn btn-info my-2 my-sm-5 m-2 mt-0 py-2 py-sm-2 p-5"/>
+          <input type="button" value="Cadastrar" onclick="redirecionarCadastro();" class="btn btn-info my-2 my-sm-5 m-2 mt-0 py-2 py-sm-2 p-5"/>
         </div>
     	</form>
     <?php } else{?>

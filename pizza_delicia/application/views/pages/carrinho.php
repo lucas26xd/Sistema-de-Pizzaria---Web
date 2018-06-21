@@ -51,8 +51,7 @@
 			</div>
 
 			<div class="form-group" align="center">
-			  <input type="submit" class="btn btn-success" name="env" value="Cadastrar">
-			  <input type="reset" class="btn btn-danger" name="limpar" value="Limpar">
+			  <input type="submit" class="btn btn-success" name="env" value="Finalizar Compra">
       </div>
 		</form>
 	<?php } else if($this->session->has_userdata('usuario') && $this->session->userdata('id') != '0') { ?>

@@ -58,7 +58,7 @@
 								</div>
 						</div>
 					</div>
-					
+
 			</div>
 
 				<input id="addEnd" type="image" src="<?=base_url('static/imagens/addEnd.png')?>" alt="Adicionar" width="30" height="30">
@@ -78,7 +78,7 @@
 
 				<br><br>
         <div class="row justify-content-center">
-				  <input type="submit" class="col" name="env" value="Cadastrar">
-				  <input type="reset" class="col" name="limpar" value="Limpar">
+				  <input type="submit" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5" name="env" value="Cadastrar">
+				  <input type="reset" class="btn btn-danger my-2 my-sm-5 m-2 py-2 py-sm-2 p-5" name="limpar" value="Limpar">
         </div>
 			</form>

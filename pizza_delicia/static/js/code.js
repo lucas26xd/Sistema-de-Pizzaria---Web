@@ -206,6 +206,10 @@ function validaEmail(campo) { //função que verifica se o email é válido
 	}
 }
 
+function redirecionarCadastro(){
+  window.location.href = "http://localhost/Projeto-Final-TecWeb/pizza_delicia/cadastro";
+}
+
 //----------------------CODIGO EM LIMBO----------------------
 function verificaCampos(form) {
 	if (form.nome.value.length > 0) {
