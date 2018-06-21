@@ -16,7 +16,10 @@
 	<?php endif; ?>
 
 	<?php if(!($this->session->has_userdata('usuario') && ($this->session->has_userdata('senha')))) { ?>
-  	<form action="<?=base_url('logar')?>" method="POST" class="form-signin">
+    <form action="<?=site_url('cadastro')?>" method="POST" class="form-signin">
+      <input type="submit" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
+    </form>
+    <form action="<?=base_url('logar')?>" method="POST" class="form-signin">
       <div class="text-center mb-4">
         <!--<img class="mb-4" src="<?=base_url('static/imagens/logo.png');?>" alt="Pizza Delícia" height="72">-->
         <h1 class="h3 mb-3 font-weight-normal f" align="center">LOGIN:</h1>
@@ -34,10 +37,8 @@
         </div>
   		</div>
   		<div class="form-group" align="center">
-        <input type="submit" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
         <input type="submit" value="Entrar" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
   		</div>
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
   	</form>
   <?php } else { ?>
     <?php if($this->session->userdata('id') == '0'){ ?>
@@ -61,12 +62,11 @@
     		</div>
     		<div class="form-group" align="center">
     			<input type="submit" value="Entrar" class="btn btn-success my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
-            <form action="<?=base_url('cadastro')?>" method="POST" class="form-signin">
-              <input type="submit" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
-            </form>
     		</div>
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2018</p>
     	</form>
+      <form action="<?=site_url('cadastro')?>" method="POST" class="form-signin">
+        <input type="submit" value="Cadastrar" class="btn btn-info my-2 my-sm-5 m-2 py-2 py-sm-2 p-5"/>
+      </form>
     <?php } else{?>
       <p class="lead">Olá <strong><?=$this->session->userdata('usuario')?></strong>!</p>
           <p>
