@@ -73,4 +73,14 @@ class Pedido_model extends CI_Model {
     $this->db->delete('itensPedido', array('id' => $id));
   }
 
+  public function get_pedidos($id = null) {
+    $this->db->order_by('id', 'ASC');
+    if ($id === null) {
+      $query = $this->db->get('pedido');
+      return $query->result_array();
+    }
+    $query = $this->db->get_where('pedido', array('id' => $id));
+    return $query->result_array();
+  }
+  
 }

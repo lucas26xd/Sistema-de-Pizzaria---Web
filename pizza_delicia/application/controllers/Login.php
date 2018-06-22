@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
 
   /**
-   * Página de Login do sistema Pizarria Delícia.
+   * Página de Login do sistema Pizza Delícia.
    *
    */
   public function index($page = 'login'){

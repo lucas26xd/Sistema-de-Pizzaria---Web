@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Cadastro extends CI_Controller {
 
   /**
-   * Página de Cadastro do sistema Pizzaria Delícia.
+   * Página de Cadastro do sistema Pizza Delícia.
    *
    */
   public function index($page = 'cadastro') {

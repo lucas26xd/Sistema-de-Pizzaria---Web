@@ -21,22 +21,6 @@
 
 	<body>
 
-    <!--div class="container">
-      <header>
-        <h1 id="cabecalho">PizzaDelícia</h1>
-      </header>
-      <nav class="old">
-        <ul>
-          <li><a href="<?=site_url('principal')?>">Principal</a></li>
-          <li><a href="<?=site_url('cardapio')?>">Cardápio</a></li>
-          <li><a href="<?=site_url('promocao')?>">Promoções</a></li>
-          <li><a href="<?=site_url('pedido')?>">Realizar Pedido</a></li>
-          <li><a href="<?=site_url('sugestao')?>">Sugestões</a></li>
-          <li><a href="<?=site_url('cadastro')?>">Cadastro</a></li>
-        </ul>
-      </nav>
-      <br-->
-
   	<header>
 
       <!-- Fixed navbar -->
@@ -58,7 +42,7 @@
               </li>-->
               <li class="nav-item">
                 <div class="my-2 my-sm-0 m-4 border border-danger rounded">
-                  <a class="nav-link <?php if (!strcmp($title,'Cardapio')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cardapio')?>"><strong>Cardápio</strong></a>
+                  <a class="nav-link <?php if (!strcmp($title,'Cardapio')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cardapio')?>"><i class="fas fa-utensils"></i><strong> Cardápio</strong></a>
                 </div>
               </li>
               <!--<li class="nav-item">
@@ -69,7 +53,7 @@
               </li>-->
               <li class="nav-item">
                 <div class="my-2 my-sm-0 m-4 border border-danger rounded">
-                  <a class="nav-link <?php if (!strcmp($title,'Sugestao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('sugestao')?>"><strong>Sugestões</strong></a>
+                  <a class="nav-link <?php if (!strcmp($title,'Sugestao')) echo 'active font-weight-bold'; ?>" href="<?=site_url('sugestao')?>"><i class="fas fa-comment-alt"></i><strong> Sugestões</strong></a>
                 <div>
               </li>
               <!--<li class="nav-item">
@@ -80,22 +64,23 @@
                   <a class="nav-link <?php if (!strcmp($title,'Cliente')) echo 'active font-weight-bold'; ?>" href="<?=site_url('cliente')?>"><strong>Cliente</strong></a>
                 <div>
               </li>-->
+              <li class="nav-item">
+                <div class="my-2 my-sm-0 m-4 border border-danger rounded">
+                  <a class="nav-link <?php if (!strcmp($title,'Admin')) echo 'active font-weight-bold'; ?>" href="<?=site_url('admin')?>"><i class="fas fa-lock"></i><strong> Admin</strong></a>
+                <div>
+              </li>              
             </ul>
           </div>
           <a class="btn btn-outline-dark my-2 my-sm-0 m-3" href="<?=site_url('carrinho')?>" role="button">
-            <img class="d-inline-block align-top" src="<?=base_url('static/imagens/carrinho.png')?>" height="20" alt="Carrinho">
-            Carrinho</a>
+            <i class="fas fa-shopping-cart"></i> Carrinho</a>
             <?php if(!$this->session->has_userdata('id') || $this->session->userdata('id') == 0){ ?>
           <a class="btn btn-outline-success my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
-            <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
-            Login</a>
+            <i class="fas fa-user-circle fa-lg"></i> Login</a>
         <?php } else { ?>
         <a class="btn btn-outline-primary my-2 my-sm-0" href="<?=site_url('login')?>" role="button">
-          <img class="d-inline-block align-top" src="<?=base_url('static/imagens/login.png')?>" height="25" alt="Login">
-          Logado</a>
+          <i class="fas fa-user-circle fa-lg"></i> Logado</a>
         <?php } ?>
         </div>
-
 
       </nav>
     </header>

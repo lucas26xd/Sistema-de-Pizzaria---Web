@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Sugestao extends CI_Controller {
 
   /**
-   * Página de Sugestões do sistema Pizzaria Delícia.
+   * Página de Sugestões do sistema Pizza Delícia.
    *
    */
   public function index($page = 'sugestao'){
