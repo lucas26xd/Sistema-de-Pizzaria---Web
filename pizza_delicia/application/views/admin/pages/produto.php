@@ -1,6 +1,6 @@
 
     <div class="mt-3 shadow-lg p-5 bg-white rounded">
-      <h1>Pedidos</h1>
+      <h1>Produtos</h1>
       <hr style="margin: 2rem 0rem 2rem 0rem;">
            
       <!--button class="mb-4 btn btn-success" onclick="add_cliente()">
